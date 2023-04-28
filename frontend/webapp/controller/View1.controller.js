@@ -70,6 +70,12 @@ var Controller = Controller.extend("sap.viz.sample.Treemap.Treemap", {
     onInit : function (evt) {
         Format.numericFormatter(ChartFormatter.getInstance());
         var formatPattern = ChartFormatter.DefaultPattern;
+
+        var jsonData = new sap.ui.model.json.JSONModel("../model/output.json");
+        var oVizFrame = this.getView().byId("idVizFrame");
+        oVizFrame.setModel(jsonData);
+
+
         // set explored app's demo model on this sample
 
 //         var sServiceUrl = "https://srk-spa-test.sap-process-automation.cfapps.sap.hana.ondemand.com/comsapspaprocessautomation.comsapspapvinstances/pv-service/runtime/odata/v1/Accounts_Payable/Instances?$skip=0&$top=20";
@@ -113,10 +119,13 @@ var Controller = Controller.extend("sap.viz.sample.Treemap.Treemap", {
                 text: 'Revenue and Cost by Country and Store Name'
             }
         });
-        var dataModel = new JSONModel("../backend/data.json");
+        // const dataModel = new JSONModel("C:\Users\I527375\Documents\Innvent\frontend\webapp\controller\output.json");
 
-        oVizFrame.setModel(dataModel);  //oModel
+        // oVizFrame.setModel(dataModel);  //oModel
         // oVizFrame.setModel(oModel);
+        // var model = this.getOwnerComponent().getModel("processData");
+        // console.log(model.getData());
+
 
         var oPopOver = this.getView().byId("idPopOver");
         oPopOver.connect(oVizFrame.getVizUid());
@@ -125,8 +134,8 @@ var Controller = Controller.extend("sap.viz.sample.Treemap.Treemap", {
         InitPageUtil.initPageSettings(this.getView());
     },
     onAfterRendering : function(){
-        this.datasetRadioGroup = this.getView().byId('datasetRadioGroup');
-        this.datasetRadioGroup.setSelectedIndex(this.settingsModel.dataset.defaultSelected);
+        // this.datasetRadioGroup = this.getView().byId('datasetRadioGroup');
+        // this.datasetRadioGroup.setSelectedIndex(this.settingsModel.dataset.defaultSelected);
 
         },
     onDatasetSelected : function(oEvent){

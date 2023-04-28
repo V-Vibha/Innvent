@@ -1,16 +1,14 @@
-<mvc:View controllerName="sap.btp.sapui5.controller.View1"
+<mvc:View controllerName="frontend.controller.View1"
     xmlns="sap.m"
     xmlns:viz="sap.viz.ui5.controls" xmlns:layout="sap.ui.layout"
-    xmlns:mvc="sap.ui.core.mvc" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
-    xmlns:viz.data="sap.viz.ui5.data" height="100%">
+    xmlns:mvc="sap.ui.core.mvc" xmlns:vizFeeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:vizData="sap.viz.ui5.data" height="100%"
+    >
 
     
 
     <Page id="page" title="{i18n>title}">
-        <!-- mvc:View controllerName="sap.viz.sample.Treemap.Treemap" xmlns="sap.m"
-    xmlns:viz="sap.viz.ui5.controls" xmlns:layout="sap.ui.layout"
-    xmlns:mvc="sap.ui.core.mvc" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
-    xmlns:viz.data="sap.viz.ui5.data" height="100%"> -->
+        
     <layout:FixFlex id='chartFixFlex' minFlexSize="250">
         <!--Below is the setting panel -->
         <layout:fixContent>
@@ -19,12 +17,7 @@
                     <HBox id="_IDGenHBox1" class='settingsHBox'>
                     <VBox id="_IDGenVBox1" class='settingsBox'>
                         <Label id="_IDGenLabel1" text="{/dataset/name}" design="Bold" class='settingsLabel'></Label>
-                        <RadioButtonGroup id='datasetRadioGroup'
-                                buttons="{path: '/dataset/values'}">
-                            <buttons>
-                                <RadioButton id="_IDGenRadioButton1" class='settingsRadio' text="{name}" select="onDatasetSelected"/>
-                            </buttons>
-                        </RadioButtonGroup>
+                        
                     </VBox>
                     <VBox id="_IDGenVBox2" class='settingsBox'>
                         <Label id="_IDGenLabel2" text = '{/dataLabel/name}' design="Bold" class='settingsLabel'></Label>
@@ -36,50 +29,83 @@
                     </VBox>
                     <VBox id="_IDGenVBox3" class='settingsBox'>
                         <Label id="_IDGenLabel3" text = '{/semanticColor/name}' design="Bold" class='settingsLabel'></Label>
+
+                        
                         <Switch id='semanticColorSwitch' class='settingsSwitch' state="{/semanticColor/defaultState}" change='onSemanticColorChanged'>
                             <layoutData>
                                 <FlexItemData id="_IDGenFlexItemData2" growFactor="1" />
                             </layoutData>
                         </Switch>
                     </VBox>
+                    
                     </HBox>
                 </content>
             </Panel>
              <viz:Popover id="idPopOver"></viz:Popover>
         </layout:fixContent>
         <layout:flexContent>
-            <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
+        
+            <!-- <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
                 height='100%' width="100%" vizType='treemap'>
+                
+            
+                
+
                 <viz:dataset>
-                    <viz.data:FlattenedDataset id="_IDGenFlattenedDataset1" data="{/properties}">
+                    <viz.data:FlattenedDataset id="_IDGenFlattenedDataset1" data="{processData>/}">
                         <viz.data:dimensions>
-                            <viz.data:DimensionDefinition id="_IDGenDimensionDefinition1" name="documentType"
-                                value="{documentType}" />
-                            <viz.data:DimensionDefinition id="_IDGenDimensionDefinition2" name="vendor"
-                                value="{vendor}" />
+                            <viz.data:DimensionDefinition id="_IDGenDimensionDefinition1" name="invoiceValue"
+                                value="Invoice Value" />
+                            <viz.data:DimensionDefinition id="_IDGenDimensionDefinition2" name="Document Number"
+                                value="Document Number" />
                         </viz.data:dimensions>
                         <viz.data:measures>
-                            <viz.data:MeasureDefinition id="_IDGenMeasureDefinition1" name="Critical_Vendor"
-                                value="{Critical_Vendor}" />
-                            <viz.data:MeasureDefinition id="_IDGenMeasureDefinition2" name="invoiceValue"
-                                value="{invoiceValue}" />
+                            <viz.data:MeasureDefinition id="_IDGenMeasureDefinition1" name="Business Area"
+                                value="Business Area" />
+                            <viz.data:MeasureDefinition id="_IDGenMeasureDefinition2" name="documentType"
+                                value="Document Type" />
                         </viz.data:measures>
                     </viz.data:FlattenedDataset>
                 </viz:dataset>
 
                 <viz:feeds>
+                
                     <viz.feeds:FeedItem id="_IDGenFeedItem1" uid="color" type="Measure"
-                        values="Critical_Vendor" />
+                        values="Document Number" />
                     <viz.feeds:FeedItem id="_IDGenFeedItem2" uid="weight" type="Measure"
-                        values="invoiceValue" />                     
+                        values="IBusiness Area" />                     
                     <viz.feeds:FeedItem id="_IDGenFeedItem3" uid="title" type="Dimension"
-                        values="documentType" />    
+                        values="Document Type" />    
                     <viz.feeds:FeedItem id="_IDGenFeedItem4" uid="title" type="Dimension"
-                        values="vendor" />
-                        
-
+                        values="Vendor" />
                 </viz:feeds>
-            </viz:VizFrame>
+                
+            </viz:VizFrame> -->
+
+
+        <viz:VizFrame height="" id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
+vizProperties="{plotArea: { drawingEffect: 'glossy'}, title:{ text:'Key performance indicators'},dataLabel:{visible:true,showTotal:true}}"
+vizType="stacked_bar">
+<viz:dataset>
+<vizData:FlattenedDataset data="{/data}">
+<vizData:dimensions>
+<vizData:DimensionDefinition name="Status" value="{Status}"/>
+</vizData:dimensions>
+<vizData:measures>
+<vizData:MeasureDefinition name="Document Number" value="{Document Number}"/>
+<vizData:MeasureDefinition name="Business Area" value="{Business Area}"/>
+
+</vizData:measures>
+</vizData:FlattenedDataset>
+</viz:dataset>
+<viz:feeds>
+
+<vizFeeds:FeedItem type="Measure" uid="valueAxis" values="Document Number,Business Area"/>
+<vizFeeds:FeedItem type="Dimension" uid="categoryAxis" values="Status"/>
+</viz:feeds>
+</viz:VizFrame>
+
+
         </layout:flexContent>
     </layout:FixFlex>
 
