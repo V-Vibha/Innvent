@@ -2,7 +2,7 @@
 
 specVersion: "2.6"
 metadata:
-  name: frontend
+  name: project2
 type: application
 server:
   customMiddleware:
@@ -24,5 +24,5 @@ server:
     - name: fiori-tools-preview
       afterMiddleware: fiori-tools-appreload
       configuration:
-        component: frontend
+        component: project2
         ui5Theme: sap_horizon

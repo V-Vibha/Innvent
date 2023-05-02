@@ -5,12 +5,12 @@
 sap.ui.define([
         "sap/ui/core/UIComponent",
         "sap/ui/Device",
-        "frontend/model/models"
+        "project2/model/models"
     ],
     function (UIComponent, Device, models) {
         "use strict";
 
-        return UIComponent.extend("frontend.Component", {
+        return UIComponent.extend("project2.Component", {
             metadata: {
                 manifest: "json"
             },
@@ -28,7 +28,7 @@ sap.ui.define([
                 this.getRouter().initialize();
 
                 // set the device model
-                // this.setModel(models.createDeviceModel(), "device");
+                this.setModel(models.createDeviceModel(), "device");
             }
         });
     }

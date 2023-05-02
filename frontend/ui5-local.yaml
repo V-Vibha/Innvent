@@ -2,11 +2,11 @@
 
 specVersion: "2.6"
 metadata:
-  name: frontend
+  name: project2
 type: application
 framework:
   name: SAPUI5
-  version: 1.113.0
+  version: 1.112.1
   libraries:
     - name: sap.m
     - name: sap.ui.core
@@ -32,5 +32,5 @@ server:
     - name: fiori-tools-preview
       afterMiddleware: fiori-tools-appreload
       configuration:
-        component: frontend
+        component: project2
         ui5Theme: sap_horizon

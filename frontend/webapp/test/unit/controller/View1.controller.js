@@ -1,7 +1,7 @@
 /*global QUnit*/
 
 sap.ui.define([
-	"frontend/controller/View1.controller"
+	"project2/controller/View1.controller"
 ], function (Controller) {
 	"use strict";
 

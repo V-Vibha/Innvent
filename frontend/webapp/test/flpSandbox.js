@@ -40,7 +40,7 @@ sap.ui.define([
 								"tileType": "sap.ushell.ui.tile.StaticTile",
 								"properties": {
 									"title": "App Title",
-									"targetURL": "#frontend-display"
+									"targetURL": "#project2-display"
 								}
 							}]
 						}]
@@ -51,8 +51,8 @@ sap.ui.define([
 				"adapter": {
 					"config": {
 						"inbounds": {
-							"frontend-display": {
-								"semanticObject": "frontend",
+							"project2-display": {
+								"semanticObject": "project2",
 								"action": "display",
 								"description": "A Fiori application.",
 								"title": "App Title",
@@ -61,8 +61,8 @@ sap.ui.define([
 								},
 								"resolutionResult": {
 									"applicationType": "SAPUI5",
-									"additionalInformation": "SAPUI5.Component=frontend",
-									"url": sap.ui.require.toUrl("frontend")
+									"additionalInformation": "SAPUI5.Component=project2",
+									"url": sap.ui.require.toUrl("project2")
 								}
 							}
 						}
