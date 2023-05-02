@@ -8,170 +8,438 @@ sap.ui.define([
 ], function(Controller, BindingMode, JSONModel, ChartFormatter, Format, InitPageUtil) {
 "use strict";
 
-var Controller = Controller.extend("sap.viz.sample.Treemap.Treemap", {
+        return Controller.extend("project2.controller.View1", {
+        dataPath : "test-resources/sap/viz/demokit/dataset/milk_production_testing_data/revenue_cost_consume_country/1_percent",
 
-    // dataPath : "/home/user/projects/sapui5",
+        settingsModel : {
+            dataset : {
+                name: "Dataset",
+                defaultSelected : 1,
+                values : [{
+                    name : "Small",
+                    value : "/small.json"
+                },{
+                    name : "Medium",
+                    value : "/medium.json"
+                },{
+                    name : "Large",
+                    value : "/large.json"
+                }]
+            },
+            dataLabel : {
+                name : "Value Label",
+                defaultState : true
+            },
+            semanticColor: {
+                name:"Semantic colors",
+                defaultState: false,
+                values: {
+                            "false":{},
+                            "true":{
+                                rules:[
+                                    {
+                                        dataContext: {Count:{max:50}},
+                                        properties:{
+                                            color: "sapUiChartPaletteSemanticGood"
+                                        },
+                                        displayName: "> 4.0L"
+                                    },
+                                    {
+                                        dataContext: {Count:{min:50, max:170}},
+                                        properties:{
+                                            color: "sapUiChartPaletteSemanticCritical"
+                                        },
+                                        displayName: "2.2L - 4.0L"
+                                    },
+                                    {
+                                        dataContext: {Count:{min:170}},
+                                        properties:{
+                                            color: "sapUiChartPaletteSemanticBad"
+                                        },
+                                        displayName: "< 1.8L"
+                                    }
+                            
 
-    settingsModel : {
-        dataset : {
-            name: "Dataset",
-            defaultSelected : 1,
-            values : [{
-                name : "Small",
-                value : "/small.json"
-            },{
-                name : "Medium",
-                value : "/data.json"
-            },{
-                name : "Large",
-                value : "/large.json"
-            }]
-        },
-        dataLabel : {
-            name : "Value Label",
-            defaultState : true
-        },
-        semanticColor: {
-            name:"Semantic colors",
-            defaultState: false,
-            values: {
-                        "false":{},
-                        "true":{
-                            rules:[
-                                {
-                                    dataContext: {Revenue:{min:2600000}},
-                                    properties:{
-                                        color: "sapUiChartPaletteSemanticGood"
-                                    },
-                                    displayName: "> 2.6M"
-                                },
-                                                                    {
-                                    dataContext: {Revenue:{min:1300000, max:2600000}},
-                                    properties:{
-                                        color: "sapUiChartPaletteSemanticCritical"
-                                    },
-                                    displayName: "1.3M - 2.6M"
-                                },
-                                {
-                                    dataContext: {Revenue:{max:1300000}},
-                                    properties:{
-                                        color: "sapUiChartPaletteSemanticBad"
-                                    },
-                                    displayName: "< 1.3M"
-                                }
-
-                            ]
+                                ]
+                            }
                         }
-                    }
-        }
-    },
-
-    oVizFrame : null,
-    onInit : function (evt) {
-        Format.numericFormatter(ChartFormatter.getInstance());
-        var formatPattern = ChartFormatter.DefaultPattern;
-
-        var jsonData = new sap.ui.model.json.JSONModel("../model/output.json");
-        var oVizFrame = this.getView().byId("idVizFrame");
-        oVizFrame.setModel(jsonData);
-
-
-        // set explored app's demo model on this sample
-
-//         var sServiceUrl = "https://srk-spa-test.sap-process-automation.cfapps.sap.hana.ondemand.com/comsapspaprocessautomation.comsapspapvinstances/pv-service/runtime/odata/v1/Accounts_Payable/Instances?$skip=0&$top=20";
-// //   //Create OData model
-// var oModel = new sap.ui.model.odata.v2.ODataModel(sServiceUrl, {
-// useBatch : true
-// });
-
-// var oData = oModel.read(
-// "/Nodes",
-// function(oData2, oResponse) {console.log("Success!");},
-// function(oError) {console.log("Error!");}
-// );
-
-// //Create JSON Model
-// var oODataJSONModel = new sap.ui.model.json.JSONModel();
-// oODataJSONModel.setData({ modelData : oData });
-//         var oModel = new JSONModel(this.settingsModel);
-//         oModel.setDefaultBindingMode(BindingMode.OneWay);
-
-
-//         this.getView().setModel(oModel);
-
-        var oVizFrame = this.oVizFrame = this.getView().byId("idVizFrame");
-        oVizFrame.setVizProperties({
-            plotArea: {
-                dataLabel: {
-                    formatString:formatPattern.SHORTFLOAT_MFD2,
-                    visible: true
-                }
-            },
-            legend: {
-                visible: true,
-                formatString:formatPattern.SHORTFLOAT,
-                title: {
-                    visible: false
-                }
-            },
-            title: {
-                visible: false,
-                text: 'Revenue and Cost by Country and Store Name'
             }
-        });
-        // const dataModel = new JSONModel("C:\Users\I527375\Documents\Innvent\frontend\webapp\controller\output.json");
-
-        // oVizFrame.setModel(dataModel);  //oModel
-        // oVizFrame.setModel(oModel);
-        // var model = this.getOwnerComponent().getModel("processData");
-        // console.log(model.getData());
-
-
-        var oPopOver = this.getView().byId("idPopOver");
-        oPopOver.connect(oVizFrame.getVizUid());
-        oPopOver.setFormatString(formatPattern.STANDARDFLOAT);
-
-        InitPageUtil.initPageSettings(this.getView());
-    },
-    onAfterRendering : function(){
-        // this.datasetRadioGroup = this.getView().byId('datasetRadioGroup');
-        // this.datasetRadioGroup.setSelectedIndex(this.settingsModel.dataset.defaultSelected);
-
         },
-    onDatasetSelected : function(oEvent){
-        var datasetRadio = oEvent.getSource();
-        if (this.oVizFrame && datasetRadio.getSelected()){
-            var bindValue = datasetRadio.getBindingContext().getObject();
-            // var dataModel = new JSONModel(this.dataPath + bindValue.value);
-            this.oVizFrame.setModel(dataModel);   //oModel
-            // this.oVizFrame.setModel(oModel);
-        }
-    },
-    onDataLabelChanged : function(oEvent){
-        if (this.oVizFrame){
-            this.oVizFrame.setVizProperties({
+        oVizFrame : null,
+        onInit : function (evt) {
+            Format.numericFormatter(ChartFormatter.getInstance());
+            var formatPattern = ChartFormatter.DefaultPattern;
+            // set explored app's demo model on this sample
+            var oModel = new JSONModel(this.settingsModel);
+            oModel.setDefaultBindingMode(BindingMode.OneWay);
+            this.getView().setModel(oModel);
+
+            var Vbox =  this.getView().byId("Vbox");
+            var oVizFrame = this.oVizFrame = this.getView().byId("idVizFrame");
+            oVizFrame.setVizProperties({
                 plotArea: {
                     dataLabel: {
-                        visible: oEvent.getParameter('state')
+                        formatString:formatPattern.SHORTFLOAT_MFD2,
+                        visible: true
                     }
+                },
+                legend: {
+                    visible: true,
+                    formatString:formatPattern.SHORTFLOAT,
+                    title: {
+                        visible: false
+                    }
+                },
+                title: {
+                    visible: false,
+                    text: 'Revenue and Cost by Country and Store Name'
                 }
             });
-        }
-    },
-    onSemanticColorChanged : function(oEvent){
-        if (this.oVizFrame) {
-            var oVizProperties = this.oVizFrame.getVizProperties();
-            console.log(oVizProperties); // eslint-disable-line no-console
-            this.oVizFrame.setVizProperties({
-                plotArea: {
-                    dataPointStyle: this.settingsModel.semanticColor.values[oEvent.getParameter("state")]
-                }
-            });
-            window.test = this.oVizFrame.getVizProperties();
-        }
-    }
-});
 
-return Controller;
+            var oData= {
+                "Reports": [
+                  {
+                    "Scenario Instance Id": "643ed8013398cc24c76d01fd",
+                    "State": "Open",
+                    "Status": "Critical",
+                    "SubStatus": "Payment Block Set",
+                    "Company Code": "R100",
+                    "Document Number": "66942",
+                    "Count": "20",
+                    "Business Area": "8889",
+                    "Document Type": "RE",
+                    "Cycle Time": "4.63 Days",
+                    "Vendor": "Acme Industrial Supplies",
+                    "Invoice Value": "6050 EUR",
+                    "Active Phases": "Record Invoice",
+                    "Completed Phases": "Create Invoice",
+                    "Compliance Issues": "0",
+                    "Critical Vendor": "0",
+                    "Early Payment": "0",
+                    "Invoiced Manually": "1",
+                    "Count":1,
+                    "Late Payment": "0"
+                  },
+                  {
+                    "Scenario Instance Id": "643ed8013398cc24c76d027f",
+                    "State": "Open",
+                    "Status": "Critical",
+                    "SubStatus": "On Time",
+                    "Company Code": "2000",
+                    "Document Number": "44910",
+                    "Count": "12",
+                    "Business Area": "7000",
+                    "Document Type": "KR",
+                    "Cycle Time": "7.83 Days",
+                    "Vendor": "American Business Services",
+                    "Invoice Value": "10814 EUR",
+                    "Active Phases": "Pay Invoice",
+                    "Completed Phases": "Create Invoice,Record Invoice",
+                    "Compliance Issues": "0",
+                    "Critical Vendor": "1",
+                    "Early Payment": "0",
+                    "Invoiced Manually": "0",
+                    "Count":1,
+                    "Late Payment": "0"
+                  },
+                  {
+                    "Scenario Instance Id": "643ed8013398cc24c76d020c",
+                    "State": "Open",
+                    "Status": "Critical",
+                    "SubStatus": "Payment Block Set",
+                    "Company Code": "R100",
+                    "Document Number": "294336",
+                    "Count": "2",
+                    "Business Area": "9900",
+                    "Document Type": "KR",
+                    "Cycle Time": "4.62 Days",
+                    "Vendor": "Sommer GmbH",
+                    "Invoice Value": "7600 EUR",
+                    "Active Phases": "Record Invoice",
+                    "Completed Phases": "Create Invoice",
+                    "Compliance Issues": "0",
+                    "Critical Vendor": "0",
+                    "Early Payment": "0",
+                    "Invoiced Manually": "1",
+                    "Count":1,
+                    "Late Payment": "0"
+                  },
+                  {
+                    "Scenario Instance Id": "643ed8013398cc24c76d018a",
+                    "State": "Open",
+                    "Status": "Critical",
+                    "SubStatus": "Payment Block Set",
+                    "Company Code": "3000",
+                    "Document Number": "235458",
+                    "Count": "5",
+                    "Business Area": "3000",
+                    "Document Type": "RE",
+                    "Cycle Time": "4.62 Days",
+                    "Vendor": "AluCast",
+                    "Invoice Value": "358 EUR",
+                    "Active Phases": "Record Invoice",
+                    "Completed Phases": "Create Invoice",
+                    "Compliance Issues": "0",
+                    "Critical Vendor": "0",
+                    "Early Payment": "0",
+                    "Invoiced Manually": "1",
+                    "Count":1,
+                    "Late Payment": "0"
+                  },
+                  {
+                    "Scenario Instance Id": "643ed8013398cc24c76cff82",
+                    "State": "Open",
+                    "Status": "Critical",
+                    "SubStatus": "Payment Block Set",
+                    "Company Code": "1000",
+                    "Document Number": "101610",
+                    "Count": "9",
+                    "Business Area": "9900",
+                    "Document Type": "RE",
+                    "Cycle Time": "4.63 Days",
+                    "Vendor": "Acme Industrial Supplies",
+                    "Invoice Value": "10814 EUR",
+                    "Active Phases": "Record Invoice",
+                    "Completed Phases": "Create Invoice",
+                    "Compliance Issues": "0",
+                    "Critical Vendor": "0",
+                    "Early Payment": "0",
+                    "Invoiced Manually": "1",
+                    "Count":1,
+                    "Late Payment": "0"
+                  },
+                  {
+                    "Scenario Instance Id": "643ed8013398cc24c76cffb3",
+                    "State": "Open",
+                    "Status": "Critical",
+                    "SubStatus": "Payment Block Set",
+                    "Company Code": "R100",
+                    "Document Number": "298512",
+                    "Count": "22",
+                    "Business Area": "2000",
+                    "Document Type": "KR",
+                    "Cycle Time": "4.62 Days",
+                    "Vendor": "Phunix GmbH",
+                    "Invoice Value": "10814 EUR",
+                    "Active Phases": "Record Invoice",
+                    "Completed Phases": "Create Invoice",
+                    "Compliance Issues": "0",
+                    "Critical Vendor": "0",
+                    "Early Payment": "0",
+                    "Invoiced Manually": "1",
+                    "Count":1,
+                    "Late Payment": "0"
+                  },
+                  {
+                    "Scenario Instance Id": "643ed8013398cc24c76d0159",
+                    "State": "Open",
+                    "Status": "Critical",
+                    "SubStatus": "On Time",
+                    "Company Code": "2000",
+                    "Document Number": "173772",
+                    "Count": "11",
+                    "Business Area": "4000",
+                    "Document Type": "RE",
+                    "Cycle Time": "7.82 Days",
+                    "Vendor": "American Business Services",
+                    "Invoice Value": "7543 EUR",
+                    "Active Phases": "Pay Invoice",
+                    "Completed Phases": "Create Invoice,Record Invoice",
+                    "Compliance Issues": "0",
+                    "Critical Vendor": "1",
+                    "Early Payment": "0",
+                    "Invoiced Manually": "0",
+                    "Count":1,
+                    "Late Payment": "0"
+                  },
+                  {
+                    "Scenario Instance Id": "643ed8013398cc24c76cff31",
+                    "State": "Open",
+                    "Status": "Critical",
+                    "SubStatus": "On Time",
+                    "Company Code": "2000",
+                    "Document Number": "186750",
+                    "Count": "7",
+                    "Business Area": "9900",
+                    "Document Type": "KR",
+                    "Cycle Time": "7.82 Days",
+                    "Vendor": "American Business Services",
+                    "Invoice Value": "8114 EUR",
+                    "Active Phases": "Pay Invoice",
+                    "Completed Phases": "Create Invoice,Record Invoice",
+                    "Compliance Issues": "0",
+                    "Critical Vendor": "1",
+                    "Early Payment": "0",
+                    "Invoiced Manually": "0",
+                    "Count":1,
+                    "Late Payment": "0"
+                  },
+                  {
+                    "Scenario Instance Id": "643ed8013398cc24c76d025d",
+                    "State": "Open",
+                    "Status": "Critical",
+                    "SubStatus": "Payment Block Set",
+                    "Company Code": "2000",
+                    "Document Number": "56772",
+                    "Count": "2",
+                    "Business Area": "9900",
+                    "Document Type": "KR",
+                    "Cycle Time": "4.63 Days",
+                    "Vendor": "Sunny Electronics GmbH",
+                    "Invoice Value": "7831 EUR",
+                    "Active Phases": "Record Invoice",
+                    "Completed Phases": "Create Invoice",
+                    "Compliance Issues": "0",
+                    "Critical Vendor": "0",
+                    "Early Payment": "0",
+                    "Invoiced Manually": "1",
+                    "Count":1,
+                    "Late Payment": "0"
+                  },
+                  {
+                    "Scenario Instance Id": "643ed8013398cc24c76d01ec",
+                    "State": "Open",
+                    "Status": "Critical",
+                    "SubStatus": "Payment Block Set",
+                    "Company Code": "3000",
+                    "Document Number": "269460",
+                    "Count": "3",
+                    "Business Area": "9900",
+                    "Document Type": "KR",
+                    "Cycle Time": "4.63 Days",
+                    "Vendor": "Tiefland Glass AG",
+                    "Invoice Value": "358 EUR",
+                    "Active Phases": "Record Invoice",
+                    "Completed Phases": "Create Invoice",
+                    "Compliance Issues": "0",
+                    "Critical Vendor": "0",
+                    "Early Payment": "0",
+                    "Invoiced Manually": "1",
+                    "Count":1,
+                    "Late Payment": "0"
+                  }
+                ]
+              };
 
-});
+            var dataModel = new JSONModel(oData);
+            oVizFrame.setModel(dataModel);
+
+            var oPopOver = this.getView().byId("idPopOver");
+            oPopOver.connect(oVizFrame.getVizUid());
+            oPopOver.setFormatString(formatPattern.STANDARDFLOAT);
+
+            InitPageUtil.initPageSettings(this.getView());
+
+
+
+
+            // ///////////////////////////////////////////////////////////////
+
+    var sURI = 'https://srk-spa-test.sap-process-automation.cfapps.sap.hana.ondemand.com/comsapspaprocessautomation.comsapspapvinstances/pv-service/runtime/odata/v1/Accounts_Payable/';
+    var oModel = new sap.ui.model.odata.ODataModel(sURI, true);
+    var oFilterQ1=new sap.ui.model.Filter('SC_Status',sap.ui.model.FilterOperator.EQ,'Critical');
+
+// // — - - - - - - - - —  - - - - - 
+
+// ///////////////////////////////////////////////////////////////
+// //tree
+//             var treeDataset = new sap.viz.ui5.data.FlattenedDataset({
+//               dimensions : [ 
+// {axis : 1,
+//                 name : 'Status',
+//                 value : '{Status}'
+//               },
+// {axis : 1,
+//                 name : 'Business Area',
+//                 value : '{Business Area}'
+//               }
+//             //   ,{
+//             //     axis : 1,
+//             //     name : 'REGION',
+//             //     value : "{REGION}"
+//             //   },{
+//             //     axis : 1,
+//             //     name : 'OPPORTUNITY_OWNER',
+//             //     value : "{OPPORTUNITY_OWNER}"
+//             //   } ,{
+//             //     axis : 1,
+//             //     name : 'CUSTOMER_DESC',
+//             //     value : "{CUSTOMER_DESC}"
+//             //   } 
+//              ],
+
+//               measures : [ {
+//                 group : 1,
+//                 name : 'Count',
+//                 value : '{Count}'
+//               }],
+
+//               data : {
+//                 path : "",
+//              filters: [oFilterQ1]
+//               }
+//             });
+            
+//             var vbar = new sap.viz.ui5.Treemap({
+//               id : "treemap",
+//               width : "80%",
+//               height : "400px",
+//               plotArea : {
+//                 "endColor":"#3300c0", 
+//                 "startColor":"#a9f0ff"
+//               },
+//               title : {
+//                 visible : true,
+//                 text : 'Profit By Country & Population'
+//               },
+//               dataset : treeDataset
+//             });
+//             vbar.setModel(oModel);
+//            vbar.placeAt(Vbox); 
+
+////////////////- - - - - - - - - - -- - - - - - - - - - -- - - - --  - -- -
+        },
+        onAfterRendering : function(){
+            this.datasetRadioGroup = this.getView().byId('datasetRadioGroup');
+            this.datasetRadioGroup.setSelectedIndex(this.settingsModel.dataset.defaultSelected);
+
+            },
+        onDatasetSelected : function(oEvent){
+            var datasetRadio = oEvent.getSource();
+            if (this.oVizFrame && datasetRadio.getSelected()){
+                var bindValue = datasetRadio.getBindingContext().getObject();
+                // var dataModel = new JSONModel(this.dataPath + bindValue.value);
+                this.oVizFrame.setModel(dataModel);
+            }
+        },
+        onDataLabelChanged : function(oEvent){
+            if (this.oVizFrame){
+                this.oVizFrame.setVizProperties({
+                    plotArea: {
+                        dataLabel: {
+                            visible: oEvent.getParameter('state')
+                        }
+                    }
+                });
+            }
+        },
+        onSemanticColorChanged : function(oEvent){
+            this._initializeSectionData();
+            if (this.oVizFrame) {
+                var oVizProperties = this.oVizFrame.getVizProperties();
+                console.log(oVizProperties); // eslint-disable-line no-console
+                this.oVizFrame.setVizProperties({
+                    plotArea: {
+                        dataPointStyle: this.settingsModel.semanticColor.values[oEvent.getParameter("state")]
+                    }
+                });
+                window.test = this.oVizFrame.getVizProperties();
+            }
+        }
+        // onInit: function () {
+        //         var a="abc"
+        //         console.log(typeof a);
+                
+        //     }
+        });
+    });
