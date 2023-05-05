@@ -21,7 +21,7 @@ sap.ui.define([
             });
             if (bSuiteAvailable) {
                 jQuery.sap.require("sap/suite/ui/commons/ChartContainer");
-                var vizframe = oView.byId("idVizFrame");
+                var vizframe = oView.byId("oVizFrame");
                 var oChartContainerContent = new sap.suite.ui.commons.ChartContainerContent({
                     icon : "sap-icon://Chart-Tree-Map",
                     title : "vizFrame Treemap Chart Sample",

@@ -69,33 +69,6 @@ sap.ui.define([
         onInit : function (evt) {
             Format.numericFormatter(ChartFormatter.getInstance());
             var formatPattern = ChartFormatter.DefaultPattern;
-            // set explored app's demo model on this sample
-            // var oModel = new JSONModel(this.settingsModel);
-            // oModel.setDefaultBindingMode(BindingMode.OneWay);
-            // this.getView().setModel(oModel);
-
-            var Vbox =  this.getView().byId("mytree");
-            var oVizFrame = this.oVizFrame = this.getView().byId("idVizFrame");
-            oVizFrame.setVizProperties({
-                plotArea: {
-                    dataLabel: {
-                        formatString:formatPattern.SHORTFLOAT_MFD2,
-                        visible: true
-                    }
-                },
-                legend: {
-                    visible: true,
-                    formatString:formatPattern.SHORTFLOAT,
-                    title: {
-                        visible: false
-                    }
-                },
-                title: {
-                    visible: false,
-                    text: 'Revenue and Cost by Country and Store Name'
-                }
-            });
-            
             var OdataModel = new sap.ui.model.odata.v2.ODataModel("pv-service/runtime/odata/v1/Accounts_Payable", {
 
                                 json: true,
@@ -103,90 +76,66 @@ sap.ui.define([
                                 //  defaultCountMode: sap.ui.model.odata.CountMode.None
                     
                    });
-
+                   var aTreeMapData = [];
                    OdataModel.read("/Instances", {
                     success: function(data) {
                       // Success callback function
                       console.log(data);
-                      oVizFrame.setModel(OdataModel);
-                    },
+                    //   oVizFrame.setModel(OdataModel);
+                    
+                    for (var i = 0; i < data.results.length; i++) {
+                        var oProduct = data.results[i];
+                        aTreeMapData.push({
+                            "name": oProduct.vendor,
+                            "item": oProduct.businessArea                            ,
+                            "value": oProduct.invoiceValue
+                        });
+                    }
+                    // var oTreeMapModel = new sap.ui.model.json.JSONModel();
+                    // oTreeMapModel.setData(aTreeMapData);
+                    // oVizFrame.setModel(oTreeMapModel);
+
+                },
                     error: function(error) {
                       // Error callback function
                       console.log(error);
                     }
                   });
-            
 
+                  //new trial
+                  var oModel = new sap.ui.model.json.JSONModel(aTreeMapData);
+                  oModel.setDefaultBindingMode(BindingMode.OneWay);
+                  console.log(`omodel: ${oModel.Count}`);
+                  
+                  this.getView().setModel(oModel);
+                  var oVizFrame = this.oVizFrame = this.getView().byId("oVizFrame");
+                  oVizFrame.setVizProperties({
+                    plotArea: {
+                        dataLabel: {
+                            formatString:formatPattern.SHORTFLOAT_MFD2,
+                            visible: true
+                        }
+                    },
+                    legend: {
+                        visible: true,
+                        formatString:formatPattern.SHORTFLOAT,
+                        title: {
+                            visible: false
+                        }
+                    },
+                    title: {
+                        visible: false,
+                        text: 'Revenue and Cost by Country and Store Name'
+                    }
+                });
+    
+            var oPopOver = this.getView().byId("idPopOver");
+            oPopOver.connect(oVizFrame.getVizUid());
+            oPopOver.setFormatString(formatPattern.STANDARDFLOAT);
 
-
-            // var oPopOver = this.getView().byId("idPopOver");
-            // oPopOver.connect(oVizFrame.getVizUid());
-            // oPopOver.setFormatString(formatPattern.STANDARDFLOAT);
-
-            // InitPageUtil.initPageSettings(this.getView());
-
-
-
-
-            // ///////////////////////////////////////////////////////////////
-
-    // var sURI = 'https://srk-spa-test.sap-process-automation.cfapps.sap.hana.ondemand.com/comsapspaprocessautomation.comsapspapvinstances/pv-service/runtime/odata/v1/Accounts_Payable/';
-    // var oModel = new sap.ui.model.odata.ODataModel(sURI, true);
+            InitPageUtil.initPageSettings(this.getView());
     var oFilterQ1=new sap.ui.model.Filter('SC_Status',sap.ui.model.FilterOperator.EQ,'Critical');
 
-//     var treeDataset = new sap.viz.ui5.data.FlattenedDataset({
-//         dimensions : [ 
-// {axis : 1,
-//           name : 'SC_State',
-//           value : '{SC_State}'
-//         },
-// {axis : 1,
-//           name : 'companyCode',
-//           value : '{OcompanyCode}'
-//         },{
-//           axis : 1,
-//           name : 'vendor',
-//           value : "{vendor}"
-//         }
-//         // ,{
-//         //   axis : 1,
-//         //   name : 'OPPORTUNITY_OWNER',
-//         //   value : "{OPPORTUNITY_OWNER}"
-//         // } ,{
-//         //   axis : 1,
-//         //   name : 'CUSTOMER_DESC',
-//         //   value : "{CUSTOMER_DESC}"
-//         // }  
-//     ],
-
-//         measures : [ {
-//           group : 1,
-//           name : 'SC_Number_Of_Instances',
-//           value : '{SC_Number_Of_Instances}'
-//         }],
-
-//         data : {
-//           path : "/Instances",
-//        filters: [oFilterQ1]
-//         }
-//       });
-      
-    //   var vbar = new sap.viz.ui5.Treemap({
-    //     id : "treemap",
-    //     width : "80%",
-    //     height : "400px",
-    //     plotArea : {
-    //       "endColor":"#3300c0", 
-    //       "startColor":"#a9f0ff"
-    //     },
-    //     title : {
-    //       visible : true,
-    //       text : 'Profit By Country & Population'
-    //     },
-    //     dataset : treeDataset
-    //   });
-    //   vbar.setModel(oModel);
-    //  vbar.placeAt("mytree"); 
 
         },
         onAfterRendering : function(){

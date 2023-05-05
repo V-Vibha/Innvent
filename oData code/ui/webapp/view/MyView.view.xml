@@ -37,13 +37,17 @@
                     </VBox>
                     </HBox>
                 </content>
-                <viz:Popover id="idPopOver"></viz:Popover>
+<viz:Popover id="idPopOver"></viz:Popover>
             </Panel>
              <VBox id="mytree" ></VBox>
+
         </layout:fixContent>
        <layout:flexContent>
+       
+       
+       <!-- <viz: id="myTreeMap" width="100%" height="500px" /> -->
         <!-- <VBox id="Vbox" ></VBox> -->
-            <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
+            <!-- <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
                 height='100%' width="100%" vizType='treemap'>
                 <viz:dataset>
                     <viz.data:FlattenedDataset id="_IDGenFlattenedDataset1" data="{/Instances/results}">
@@ -73,7 +77,26 @@
                         values="Vendor" />
                         
 
-                </viz:feeds>
+                </viz:feeds> -->
+                <viz:VizFrame id="oVizFrame" busy="false" busyIndicatorDelay="1000" visible="true" uiConfig="{ 'applicationSet': 'fiori' }"
+						vizType="dual_combination" legendVisible="true">
+						<!-- vizProperties="{'plotArea': { 'secondaryScale': { 'fixedRange': true, 'minValue': 0, 'maxValue': 30000 } }}"> -->
+						<viz:dataset>
+							<viz.data:FlattenedDataset data="{OdataModel>/Instances}">
+								<viz.data:dimensions>
+									<viz.data:DimensionDefinition name="vendor" value="{vendor}"/>
+								</viz.data:dimensions>
+								<viz.data:measures>
+									<viz.data:MeasureDefinition name="item" value="{item}"/>
+									<viz.data:MeasureDefinition name="invoiceValue" value="{invoiceValue}"/>
+								</viz.data:measures>
+							</viz.data:FlattenedDataset>
+						</viz:dataset>
+						<viz:feeds>
+							<viz.feeds:FeedItem id="value1" uid="valueAxis" type="Measure" values="item"/>
+							<viz.feeds:FeedItem id="value2" uid="valueAxis2" type="Measure" values="invoiceValue"/>
+							<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="vendor"/>
+						</viz:feeds>
             </viz:VizFrame> 
         </layout:flexContent>
     </layout:FixFlex>
