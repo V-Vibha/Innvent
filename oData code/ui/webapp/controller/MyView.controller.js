@@ -77,23 +77,47 @@ sap.ui.define([
                     
                    });
                    var aTreeMapData = [];
+                   var jsonModel;
                    OdataModel.read("/Instances", {
                     success: function(data) {
-                      // Success callback function
-                      console.log(data);
-                    //   oVizFrame.setModel(OdataModel);
+                      
+                    var oProduct;
+                    // aTreeMapData.push(data.results);
+                    jsonModel = new sap.ui.model.json.JSONModel(data.results);
+                    // console.log(jsonModel.getData());
+                    jsonModel.setDefaultBindingMode(BindingMode.OneWay);
+                    // console.log(`omodel: ${jsonModel.getData()}`);
+                    console.log(this);
+                    window.getView().setModel(jsonModel);
+                    // var oVizFrame = this.oVizFrame = window.byId("oVizFrame");
                     
-                    for (var i = 0; i < data.results.length; i++) {
-                        var oProduct = data.results[i];
-                        aTreeMapData.push({
-                            "name": oProduct.vendor,
-                            "item": oProduct.businessArea                            ,
-                            "value": oProduct.invoiceValue
-                        });
-                    }
-                    // var oTreeMapModel = new sap.ui.model.json.JSONModel();
-                    // oTreeMapModel.setData(aTreeMapData);
-                    // oVizFrame.setModel(oTreeMapModel);
+                    oVizFrame.setVizProperties({
+                      plotArea: {
+                          dataLabel: {
+                              formatString:formatPattern.SHORTFLOAT_MFD2,
+                              visible: true
+                          }
+                      },
+                      legend: {
+                          visible: true,
+                          formatString:formatPattern.SHORTFLOAT,
+                          title: {
+                              visible: false
+                          }
+                      },
+                      title: {
+                          visible: false,
+                          text: 'Revenue and Cost by Country and Store Name'
+                      }
+                  });
+
+            oVizFrame.setModel(jsonModel);
+      
+              var oPopOver = this.getView().byId("idPopOver");
+              oPopOver.connect(oVizFrame.getVizUid());
+              oPopOver.setFormatString(formatPattern.STANDARDFLOAT);
+  
+              InitPageUtil.initPageSettings(this.getView());
 
                 },
                     error: function(error) {
@@ -101,39 +125,39 @@ sap.ui.define([
                       console.log(error);
                     }
                   });
-
+                 
                   //new trial
-                  var oModel = new sap.ui.model.json.JSONModel(aTreeMapData);
-                  oModel.setDefaultBindingMode(BindingMode.OneWay);
-                  console.log(`omodel: ${oModel.Count}`);
-                  
-                  this.getView().setModel(oModel);
-                  var oVizFrame = this.oVizFrame = this.getView().byId("oVizFrame");
-                  oVizFrame.setVizProperties({
-                    plotArea: {
-                        dataLabel: {
-                            formatString:formatPattern.SHORTFLOAT_MFD2,
-                            visible: true
-                        }
-                    },
-                    legend: {
-                        visible: true,
-                        formatString:formatPattern.SHORTFLOAT,
-                        title: {
-                            visible: false
-                        }
-                    },
-                    title: {
-                        visible: false,
-                        text: 'Revenue and Cost by Country and Store Name'
-                    }
-                });
-    
-            var oPopOver = this.getView().byId("idPopOver");
-            oPopOver.connect(oVizFrame.getVizUid());
-            oPopOver.setFormatString(formatPattern.STANDARDFLOAT);
+                //   var oModel = new sap.ui.model.json.JSONModel(aTreeMapData);
+            //      jsonModel.setDefaultBindingMode(BindingMode.OneWay);
+            //       console.log(`omodel: ${jsonModel.getData()}`);
 
-            InitPageUtil.initPageSettings(this.getView());
+            //       this.getView().setModel(jsonModel);
+            //       var oVizFrame = this.oVizFrame = this.getView().byId("oVizFrame");
+            //       oVizFrame.setVizProperties({
+            //         plotArea: {
+            //             dataLabel: {
+            //                 formatString:formatPattern.SHORTFLOAT_MFD2,
+            //                 visible: true
+            //             }
+            //         },
+            //         legend: {
+            //             visible: true,
+            //             formatString:formatPattern.SHORTFLOAT,
+            //             title: {
+            //                 visible: false
+            //             }
+            //         },
+            //         title: {
+            //             visible: false,
+            //             text: 'Revenue and Cost by Country and Store Name'
+            //         }
+            //     });
+    
+            // var oPopOver = this.getView().byId("idPopOver");
+            // oPopOver.connect(oVizFrame.getVizUid());
+            // oPopOver.setFormatString(formatPattern.STANDARDFLOAT);
+
+            // InitPageUtil.initPageSettings(this.getView());
     var oFilterQ1=new sap.ui.model.Filter('SC_Status',sap.ui.model.FilterOperator.EQ,'Critical');
 
 
