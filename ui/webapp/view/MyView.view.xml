@@ -15,8 +15,7 @@
      <viz:VizFrame vizType="treemap" id="myTreeMap"
     width="100%"
     height="100%"
-    title="My TreeMap Chart"
-     >
+        >
      <viz:feeds>
                     <viz.feeds:FeedItem id="_IDGenFeedItem1" uid="weight" type="Measure"
                         values="invoiceValue" />

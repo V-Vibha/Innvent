@@ -59,10 +59,10 @@ sap.ui.define(
               value: "{SC_Number_Of_Instances}",
             },
             {
-                group: 1,
-                name: "invoiceValue",
-                value: "{invoiceValue}",
-              }
+              group: 1,
+              name: "invoiceValue",
+              value: "{invoiceValue}",
+            },
           ],
           data: {
             path: "/Instances",
