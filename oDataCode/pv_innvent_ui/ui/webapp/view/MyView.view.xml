@@ -1,0 +1,79 @@
+<mvc:View controllerName="com.sap.bpm.pv.innvent.ui.controller.MyView" 
+    xmlns="sap.m"
+    xmlns:viz="sap.viz.ui5.controls" 
+    xmlns:layout="sap.ui.layout" displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz.data="sap.viz.ui5.data" height="100%">
+
+    <Page id="page" title="{i18n>title}">
+             
+<layout:FixFlex id='chartFixFlex' minFlexSize="250">
+        <!--Below is the setting panel -->
+        <layout:fixContent>
+            <Panel id='settingsPanel' class="panelStyle" expandable="true" expanded="false" headerText="Settings" width="auto">
+                <content>
+                    <HBox id="_IDGenHBox1" class='settingsHBox'>
+                    <!-- <VBox id="_IDGenVBox1" class='settingsBox'>
+                        <Label id="_IDGenLabel1" text="{/dataset/name}" design="Bold" class='settingsLabel'></Label>
+                        <RadioButtonGroup id='datasetRadioGroup'
+                                buttons="{path: '/dataset/values'}">
+                            <buttons>
+                                <RadioButton id="_IDGenRadioButton1" class='settingsRadio' text="{name}" select="onDatasetSelected"/>
+                            </buttons>
+                        </RadioButtonGroup>
+                    </VBox> -->
+                    <VBox id="_IDGenVBox2" class='settingsBox'>
+                        <Label id="_IDGenLabel2" text = '{/dataLabel/name}' design="Bold" class='settingsLabel sapUiTinyMargin'></Label>
+                        <Switch id="_IDGenSwitch1" class='settingsSwitch' state="{/dataLabel/defaultState}" change='onDataLabelChanged'>
+                            <layoutData>
+                                <FlexItemData id="_IDGenFlexItemData1" growFactor="1" />
+                            </layoutData>
+                        </Switch>
+                    </VBox>
+                    <VBox id="_IDGenVBox3" class='settingsBox'>
+                        <Label id="_IDGenLabel3" text = '{/semanticColor/name}' design="Bold" class='settingsLabel sapUiTinyMargin'></Label>
+                        <Switch id='semanticColorSwitch' class='settingsSwitch' state="{/semanticColor/defaultState}" change='onSemanticColorChanged'>
+                            <layoutData>
+                                <FlexItemData id="_IDGenFlexItemData2" growFactor="1" />
+                            </layoutData>
+                        </Switch>
+                    </VBox>
+                    </HBox>
+                </content>
+                <viz:Popover id="idPopOver"></viz:Popover>
+            </Panel>
+         </layout:fixContent>
+       <!-- </layout:FixFlex> selected="{selected}"--> 
+       <layout:flexContent>
+       <HBox height="100%" width="100%">
+            <List id ="attributeList" items="{/}"  width="250px" headerText="Status" >
+                <items >
+                    <CustomListItem id="_IDGenStandardListItem1" >
+                        <RadioButton id="_IDGenCheckBox11" text="{value}" selected="{selected}" select="handleSelectChange"/>
+                    </CustomListItem >
+                </items>
+                <infoToolbar >
+                    <OverflowToolbar id="_IDGenOverflowToolbar1" width="250px" >
+                        <Label id ="l1" text="Recommended Attributes" />
+                    </OverflowToolbar>
+                </infoToolbar>
+            </List>
+        
+            <viz:VizFrame vizType="treemap" id="myTreeMap" width="1010px">
+                <viz:feeds>
+                    <viz.feeds:FeedItem id="_IDGenFeedItem1" uid="color" type="Measure"
+                        values="SC_Number_Of_Instances" />
+                    <viz.feeds:FeedItem id="_IDGenFeedItem2" uid="weight" type="Measure"
+                        values="SC_Number_Of_Instances" />                     
+                    <viz.feeds:FeedItem id="_IDGenFeedItem3" uid="title" type="Dimension"
+                        values="SC_Status" />    
+                    <viz.feeds:FeedItem id="_IDGenFeedItem4" uid="title" type="Dimension"
+                        values="businessArea" />
+                </viz:feeds>
+            </viz:VizFrame>
+          </HBox>  
+        </layout:flexContent>
+    </layout:FixFlex>
+    </Page>
+</mvc:View>

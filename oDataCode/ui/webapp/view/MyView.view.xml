@@ -1,0 +1,104 @@
+<mvc:View controllerName="com.sap.bpm.pv.innvent.ui.controller.MyView" xmlns="sap.m"
+    xmlns:viz="sap.viz.ui5.controls" xmlns:layout="sap.ui.layout" displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz.data="sap.viz.ui5.data" height="100%">
+
+    <Page id="page" title="{i18n>title}">
+<layout:FixFlex id='chartFixFlex' minFlexSize="250">
+        <!--Below is the setting panel -->
+        <layout:fixContent>
+            <Panel id='settingsPanel' class="panelStyle" expandable="true" expanded="true" headerText="Settings" width="auto">
+                <content>
+                    <HBox id="_IDGenHBox1" class='settingsHBox'>
+                    <VBox id="_IDGenVBox1" class='settingsBox'>
+                        <Label id="_IDGenLabel1" text="{/dataset/name}" design="Bold" class='settingsLabel'></Label>
+                        <RadioButtonGroup id='datasetRadioGroup'
+                                buttons="{path: '/dataset/values'}">
+                            <buttons>
+                                <RadioButton id="_IDGenRadioButton1" class='settingsRadio' text="{name}" select="onDatasetSelected"/>
+                            </buttons>
+                        </RadioButtonGroup>
+                    </VBox>
+                    <VBox id="_IDGenVBox2" class='settingsBox'>
+                        <Label id="_IDGenLabel2" text = '{/dataLabel/name}' design="Bold" class='settingsLabel'></Label>
+                        <Switch id="_IDGenSwitch1" class='settingsSwitch' state="{/dataLabel/defaultState}" change='onDataLabelChanged'>
+                            <layoutData>
+                                <FlexItemData id="_IDGenFlexItemData1" growFactor="1" />
+                            </layoutData>
+                        </Switch>
+                    </VBox>
+                    <VBox id="_IDGenVBox3" class='settingsBox'>
+                        <Label id="_IDGenLabel3" text = '{/semanticColor/name}' design="Bold" class='settingsLabel'></Label>
+                        <Switch id='semanticColorSwitch' class='settingsSwitch' state="{/semanticColor/defaultState}" change='onSemanticColorChanged'>
+                            <layoutData>
+                                <FlexItemData id="_IDGenFlexItemData2" growFactor="1" />
+                            </layoutData>
+                        </Switch>
+                    </VBox>
+                    </HBox>
+                </content>
+<viz:Popover id="idPopOver"></viz:Popover>
+            </Panel>
+             <VBox id="mytree" ></VBox>
+
+        </layout:fixContent>
+       <layout:flexContent>
+       
+       
+       <!-- <viz: id="myTreeMap" width="100%" height="500px" /> -->
+        <!-- <VBox id="Vbox" ></VBox> -->
+            <!-- <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
+                height='100%' width="100%" vizType='treemap'>
+                <viz:dataset>
+                    <viz.data:FlattenedDataset id="_IDGenFlattenedDataset1" data="{/Instances/results}">
+                        <viz.data:dimensions>
+                            <viz.data:DimensionDefinition id="_IDGenDimensionDefinition1" name="Status"
+                                value="{Status}" />
+                            <viz.data:DimensionDefinition id="_IDGenDimensionDefinition2" name="Vendor"
+                                value="{Vendor}" />
+                        </viz.data:dimensions>
+                        <viz.data:measures>
+                            <viz.data:MeasureDefinition id="_IDGenMeasureDefinition1" name="Count"
+                                value="{Count}" />
+                            <viz.data:MeasureDefinition id="_IDGenMeasureDefinition2" name="Item"
+                                value="{Item}" />
+                        </viz.data:measures>
+                    </viz.data:FlattenedDataset>
+                </viz:dataset>
+
+                <viz:feeds>
+                    <viz.feeds:FeedItem id="_IDGenFeedItem1" uid="color" type="Measure"
+                        values="Count" />
+                    <viz.feeds:FeedItem id="_IDGenFeedItem2" uid="weight" type="Measure"
+                        values="Count" />                     
+                    <viz.feeds:FeedItem id="_IDGenFeedItem3" uid="title" type="Dimension"
+                        values="Status" />    
+                    <viz.feeds:FeedItem id="_IDGenFeedItem4" uid="title" type="Dimension"
+                        values="Vendor" />
+                        
+
+                </viz:feeds> -->
+                <viz:VizFrame id="oVizFrame" busy="false" busyIndicatorDelay="1000" visible="true" uiConfig="{ 'applicationSet': 'fiori' }"
+						vizType="dual_combination" legendVisible="true">
+						<!-- vizProperties="{'plotArea': { 'secondaryScale': { 'fixedRange': true, 'minValue': 0, 'maxValue': 30000 } }}"> -->
+						<viz:dataset>
+							<viz.data:FlattenedDataset data="{OdataModel>/Instances}">
+								<viz.data:dimensions>
+									<viz.data:DimensionDefinition name="vendor" value="{vendor}"/>
+								</viz.data:dimensions>
+								<viz.data:measures>
+									<viz.data:MeasureDefinition name="item" value="{item}"/>
+									<viz.data:MeasureDefinition name="invoiceValue" value="{invoiceValue}"/>
+								</viz.data:measures>
+							</viz.data:FlattenedDataset>
+						</viz:dataset>
+						<viz:feeds>
+							<viz.feeds:FeedItem id="value1" uid="valueAxis" type="Measure" values="item"/>
+							<viz.feeds:FeedItem id="value2" uid="valueAxis2" type="Measure" values="invoiceValue"/>
+							<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="vendor"/>
+						</viz:feeds>
+            </viz:VizFrame> 
+        </layout:flexContent>
+    </layout:FixFlex>
+    </Page>
+</mvc:View>
