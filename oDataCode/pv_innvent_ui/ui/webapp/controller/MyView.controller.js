@@ -62,7 +62,7 @@ sap.ui.define(
                 },
                 {
                   dataContext: {
-                    SC_Number_Of_Instances: { min: 50, max: 170 },
+                    SC_Number_Of_Instances: { min: 50, max: 250 },
                   },
                   properties: {
                     color: "sapUiChartPaletteSemanticCritical",
@@ -70,7 +70,7 @@ sap.ui.define(
                   displayName: "2.2L - 4.0L",
                 },
                 {
-                  dataContext: { SC_Number_Of_Instances: { min: 170 } },
+                  dataContext: { SC_Number_Of_Instances: { min: 250 } },
                   properties: {
                     color: "sapUiChartPaletteSemanticBad",
                   },
@@ -135,13 +135,90 @@ sap.ui.define(
         console.log(treeDataset);
         oTreeMap.setModel(OdataModel);
 
+        var attData = [  
+          {  value:"Invoiced Manually", 
+           selected:false, 
+           color:"green" 
+           }, 
+          { 
+             value:"Late Payment", 
+              selected:false ,
+              color:"green" 
+          }, 
+          { 
+             value:"Completed Phases", 
+             selected:false ,
+             color:"green" 
+          }, 
+          { 
+             value:"Active Phases", 
+              selected:false 
+          }, 
+          { 
+             value:"Critical Vendor", 
+              selected:false 
+          }, 
+           { 
+             value:"Item", 
+              selected:false 
+          } ,
+          { 
+               value:"Document Type", 
+                selected:false, 
+                color:"green" 
+          }, 
+          { 
+                   value:"Early Payment", 
+                    selected:false 
+           }, 
+          { 
+             value:"Company Code", 
+              selected:false 
+           }, 
+          { 
+              value:"Business Area", 
+              selected:true 
+            
+            }, 
+             { 
+               value:"Vendor", 
+                selected:false 
+               }, 
+                { 
+                   value:"Invoice Value", 
+                    selected:false 
+                   }];
         
+           var RBModel = new JSONModel(attData);
+           var CheckBoxList = this.getView().byId("attributeList");
+           CheckBoxList.setModel(RBModel);
+
+          //  var firstItem = this.getView().byId("attributeList").getItems()[0]; 
+          //  this.getView().byId("attributeList").setSelectedItem(firstItem,true); 
+
       },
+      handleSelectChange: function (oEvent) {
+        var title =oEvent.getSource().getText();
+        sap.m.MessageToast.show(oEvent.getSource().getText());
+      },
+
       onAfterRendering: function () {
-        this.datasetRadioGroup = this.getView().byId("datasetRadioGroup");
-        this.datasetRadioGroup.setSelectedIndex(
-          this.settingsModel.dataset.defaultSelected
-        );
+        // var list = new sap.m.List({
+        //   id : "attributeList" ,
+        //   updateFinished : function(oEvent){ 
+        //        var firstItem = this.getView().byId("attributeList").getItems()[0]; 
+        //        this.getView().byId("attributeList").setSelectedItem(firstItem,true); 
+        //        // perform further neede code here..like modfieng detail page based upon first item
+        //        }
+        //   });
+          
+        //   var firstItem = this.getView().byId("attributeList").getItems()[0]; 
+        //   this.getView().byId("attributeList").setSelectedItem(firstItem,true); 
+
+        // this.datasetRadioGroup = this.getView().byId("attributeList");
+        // this.datasetRadioGroup.setSelectedIndex(
+        //   this.settingsModel.dataset.defaultSelected
+        // );
       },
       onDatasetSelected: function (oEvent) {
         var datasetRadio = oEvent.getSource();

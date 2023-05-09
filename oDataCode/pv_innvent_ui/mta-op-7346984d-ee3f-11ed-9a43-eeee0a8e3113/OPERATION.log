@@ -1,0 +1,1557 @@
+#2.0#2023 05 09 07:59:40.275#Z#INFO#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.startEvent#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########http-nio-0.0.0.0-8080-exec-23###
+[XS2StartProcessListener] Operation ID: 7346984d-ee3f-11ed-9a43-eeee0a8e3113#
+
+#2.0#2023 05 09 07:59:40.283#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.startEvent#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########http-nio-0.0.0.0-8080-exec-23###
+[XS2StartProcessListener] Process environment: {
+  "SKIP_SSL_VALIDATION" : "false",
+  "CONTROLLER_CLIENT_THREAD_POOL_SIZE" : "64",
+  "FLOWABLE_JOB_EXECUTOR_MAX_THREADS" : "128",
+  "VERSION" : "1.152.2",
+  "BASIC_AUTH_ENABLED" : "true",
+  "CONTROLLER_CLIENT_CONNECTION_POOL_SIZE" : "192",
+  "FLOWABLE_JOB_EXECUTOR_QUEUE_CAPACITY" : "4",
+  "FLOWABLE_JOB_EXECUTOR_CORE_THREADS" : "64"
+}#
+
+#2.0#2023 05 09 07:59:40.283#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.startEvent#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########http-nio-0.0.0.0-8080-exec-23###
+[XS2StartProcessListener] Current user: j.juliana.freeda.mary@sap.com#
+
+#2.0#2023 05 09 07:59:40.283#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.startEvent#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########http-nio-0.0.0.0-8080-exec-23###
+[XS2StartProcessListener] Client space: dev#
+
+#2.0#2023 05 09 07:59:40.284#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.startEvent#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########http-nio-0.0.0.0-8080-exec-23###
+[XS2StartProcessListener] Client organization: srk-spa-test#
+
+#2.0#2023 05 09 07:59:40.284#Z#INFO#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.startEvent#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########http-nio-0.0.0.0-8080-exec-23###
+[XS2StartProcessListener] Process variables: {
+  "abortOnError" : false,
+  "mtaId" : "com.sap.bpm.pv.innvent",
+  "keepFiles" : false,
+  "verifyArchiveSignature" : false,
+  "noFailOnMissingPermissions" : false,
+  "deleteServiceBrokers" : false,
+  "appArchiveId" : "1191eff4-fbb9-4035-9149-51532334982a",
+  "gitUri" : "",
+  "deleteServiceKeys" : false,
+  "noRestartSubscribedApps" : false,
+  "noStart" : false,
+  "deleteServices" : false
+}#
+
+#2.0#2023 05 09 07:59:40.333#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.validateParametersTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4695###
+[ValidateDeployParametersStep] Executing task "validateParametersTask" of process "7346bf7d-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:40.333#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.validateParametersTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4695###
+[ValidateDeployParametersStep] Validating parameters...#
+
+#2.0#2023 05 09 07:59:40.333#Z#INFO#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.validateParametersTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4695###
+[ValidateDeployParametersStep] Deploying in org "srk-spa-test" and space "dev"#
+
+#2.0#2023 05 09 07:59:40.336#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.validateParametersTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4695###
+[ValidateDeployParametersStep] Parameters validated#
+
+#2.0#2023 05 09 07:59:40.336#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.validateParametersTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4695###
+Step "Validate Parameters" finished#
+
+#2.0#2023 05 09 07:59:40.353#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.deleteRemainingFileParts#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4696###
+[DeleteRemainingFileParts] Executing task "deleteRemainingFileParts" of process "7346bf7d-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:40.353#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.deleteRemainingFileParts#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4696###
+Step "Delete Remaining File Parts" finished#
+
+#2.0#2023 05 09 07:59:40.371#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.processArchiveTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4697###
+[XS2ProcessMtaArchiveStep] Executing task "processArchiveTask" of process "7346bf7d-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:40.371#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.processArchiveTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4697###
+[XS2ProcessMtaArchiveStep] Processing MTA archive...#
+
+#2.0#2023 05 09 07:59:40.371#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.processArchiveTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4697###
+[XS2ProcessMtaArchiveStep] MTA Archive ID: 1191eff4-fbb9-4035-9149-51532334982a#
+
+#2.0#2023 05 09 07:59:40.409#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.processArchiveTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4697###
+[XS2ProcessMtaArchiveStep] MTA Archive Modules: [uicontent]#
+
+#2.0#2023 05 09 07:59:40.409#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.processArchiveTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4697###
+[XS2ProcessMtaArchiveStep] MTA Archive Requires: []#
+
+#2.0#2023 05 09 07:59:40.409#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.processArchiveTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4697###
+[XS2ProcessMtaArchiveStep] MTA Archive Resources: []#
+
+#2.0#2023 05 09 07:59:40.414#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.processArchiveTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4697###
+[XS2ProcessMtaArchiveStep] MTA archive processed#
+
+#2.0#2023 05 09 07:59:40.414#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.processArchiveTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4697###
+Step "Process Archive" finished#
+
+#2.0#2023 05 09 07:59:40.437#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.processExtensionDescriptorsTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4698###
+[ProcessMtaExtensionDescriptorsStep] Executing task "processExtensionDescriptorsTask" of process "7346bf7d-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:40.437#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.processExtensionDescriptorsTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4698###
+[ProcessMtaExtensionDescriptorsStep] Processing MTA extension descriptors...#
+
+#2.0#2023 05 09 07:59:40.437#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.processExtensionDescriptorsTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4698###
+[ProcessMtaExtensionDescriptorsStep] Extension descriptors: [ ]#
+
+#2.0#2023 05 09 07:59:40.437#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.processExtensionDescriptorsTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4698###
+[ProcessMtaExtensionDescriptorsStep] MTA extension descriptors processed#
+
+#2.0#2023 05 09 07:59:40.438#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.processExtensionDescriptorsTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4698###
+Step "Process Extension Descriptors" finished#
+
+#2.0#2023 05 09 07:59:40.456#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.detectSchemaVersionTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4699###
+[DetectMtaSchemaVersionStep] Executing task "detectSchemaVersionTask" of process "7346bf7d-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:40.456#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.detectSchemaVersionTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4699###
+[DetectMtaSchemaVersionStep] Detecting MTA major schema version...#
+
+#2.0#2023 05 09 07:59:40.457#Z#INFO#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.detectSchemaVersionTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4699###
+[DetectMtaSchemaVersionStep] Detected MTA schema version: "3"#
+
+#2.0#2023 05 09 07:59:40.460#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.detectSchemaVersionTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4699###
+Step "Detect Schema Version" finished#
+
+#2.0#2023 05 09 07:59:40.477#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.mergeDescriptorsTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4700###
+[MergeDescriptorsStep] Executing task "mergeDescriptorsTask" of process "7346bf7d-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:40.477#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.mergeDescriptorsTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4700###
+[MergeDescriptorsStep] Validating and merging descriptors...#
+
+#2.0#2023 05 09 07:59:40.478#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.mergeDescriptorsTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4700###
+[MergeDescriptorsStep] Merged deployment descriptor: {
+  "majorSchemaVersion" : 3,
+  "schemaVersion" : "3.2.0",
+  "id" : "com.sap.bpm.pv.innvent",
+  "version" : "0.0.1",
+  "modules" : [ {
+    "majorSchemaVersion" : 3,
+    "name" : "uicontent",
+    "type" : "com.sap.application.content",
+    "path" : "uicontent",
+    "properties" : { },
+    "parameters" : { },
+    "requiredDependencies" : [ {
+      "majorSchemaVersion" : 3,
+      "name" : "projectApprovalTools-html5-app-host-service",
+      "properties" : { },
+      "parameters" : {
+        "content-target" : true
+      },
+      "propertiesMetadata" : {
+        "metadata" : { }
+      },
+      "parametersMetadata" : {
+        "metadata" : { }
+      }
+    } ],
+    "providedDependencies" : [ {
+      "majorSchemaVersion" : 3,
+      "name" : "uicontent",
+      "isPublic" : false,
+      "properties" : { },
+      "parameters" : { },
+      "propertiesMetadata" : {
+        "metadata" : { }
+      },
+      "parametersMetadata" : {
+        "metadata" : { }
+      }
+    } ],
+    "propertiesMetadata" : {
+      "metadata" : { }
+    },
+    "parametersMetadata" : {
+      "metadata" : { }
+    },
+    "hooks" : [ ]
+  } ],
+  "resources" : [ {
+    "majorSchemaVersion" : 3,
+    "name" : "projectApprovalTools-html5-app-host-service",
+    "type" : "org.cloudfoundry.managed-service",
+    "properties" : { },
+    "parameters" : {
+      "service-plan" : "app-host",
+      "type" : "managed-service",
+      "service" : "html5-apps-repo"
+    },
+    "isActive" : true,
+    "isOptional" : false,
+    "propertiesMetadata" : {
+      "metadata" : { }
+    },
+    "parametersMetadata" : {
+      "metadata" : { }
+    },
+    "requiredDependencies" : [ ]
+  } ],
+  "parameters" : {
+    "deploy_mode" : "html5-repo"
+  },
+  "parametersMetadata" : {
+    "metadata" : { }
+  }
+}#
+
+#2.0#2023 05 09 07:59:40.479#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.mergeDescriptorsTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4700###
+[MergeDescriptorsStep] Descriptors validated and merged#
+
+#2.0#2023 05 09 07:59:40.479#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.mergeDescriptorsTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4700###
+Step "Merge Descriptors" finished#
+
+#2.0#2023 05 09 07:59:40.496#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.detectDeployedMtaTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4701###
+[DetectDeployedMtaStep] Executing task "detectDeployedMtaTask" of process "7346bf7d-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:40.497#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.detectDeployedMtaTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4701###
+[DetectDeployedMtaStep] Detecting deployed MTA...#
+
+#2.0#2023 05 09 07:59:40.596#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.detectDeployedMtaTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4701###
+[DetectDeployedMtaStep] Detecting MTA by id com.sap.bpm.pv.innvent and namespace null#
+
+#2.0#2023 05 09 07:59:40.597#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.detectDeployedMtaTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4701###
+[DetectDeployedMtaStep] Getting service instances by metadata label selector "mta_id=ebe1316c8b221a1f7f151aefcbc927a2,!mta_namespace"...#
+
+#2.0#2023 05 09 07:59:40.751#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.detectDeployedMtaTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4701###
+[DetectDeployedMtaStep] Getting applications by metadata label selector "mta_id=ebe1316c8b221a1f7f151aefcbc927a2,!mta_namespace"...#
+
+#2.0#2023 05 09 07:59:40.823#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.detectDeployedMtaTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4701###
+[DetectDeployedMtaStep] Deployed MTA: {
+  "metadata" : {
+    "id" : "com.sap.bpm.pv.innvent",
+    "version" : "0.0.1"
+  },
+  "applications" : [ ],
+  "services" : [ {
+    "name" : "projectApprovalTools-html5-app-host-service",
+    "metadata" : {
+      "guid" : "b9e42801-403a-498b-b9f0-0e05834278f4",
+      "createdAt" : [ 2022, 7, 15, 6, 6, 19 ],
+      "updatedAt" : [ 2023, 2, 16, 1, 45, 8 ]
+    },
+    "v3Metadata" : {
+      "annotations" : {
+        "mta_id" : "com.sap.bpm.pv.innvent",
+        "mta_version" : "0.0.1",
+        "mta_resource" : "{\"name\":\"projectApprovalTools-html5-app-host-service\"}"
+      },
+      "labels" : {
+        "mta_id" : "ebe1316c8b221a1f7f151aefcbc927a2"
+      }
+    },
+    "label" : "html5-apps-repo",
+    "plan" : "app-host",
+    "credentials" : "********",
+    "tags" : [ ],
+    "type" : "managed",
+    "lastOperation" : {
+      "type" : "CREATE",
+      "description" : "",
+      "state" : "SUCCEEDED"
+    },
+    "resourceName" : "projectApprovalTools-html5-app-host-service"
+  } ]
+}#
+
+#2.0#2023 05 09 07:59:40.823#Z#INFO#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.detectDeployedMtaTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4701###
+[DetectDeployedMtaStep] Detected deployed MTA with ID "com.sap.bpm.pv.innvent" and version "0.0.1"#
+
+#2.0#2023 05 09 07:59:40.895#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.detectDeployedMtaTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4701###
+[DetectDeployedMtaStep] Deployed MTA service keys: [ {
+  "name" : "********",
+  "metadata" : {
+    "guid" : "1d248229-806e-4389-9fb3-7b78519557d1",
+    "createdAt" : [ 2023, 5, 2, 11, 51, 3 ],
+    "updatedAt" : [ 2023, 5, 2, 11, 51, 3 ]
+  },
+  "v3Metadata" : {
+    "annotations" : {
+      "mta_id" : "com.sap.bpm.pv.innvent",
+      "mta_version" : "0.0.1"
+    },
+    "labels" : {
+      "mta_id" : "ebe1316c8b221a1f7f151aefcbc927a2",
+      "space_guid" : "095ecc29-cb57-4705-85dc-db3274cf74f5"
+    }
+  },
+  "serviceInstance" : {
+    "name" : "projectApprovalTools-html5-app-host-service",
+    "metadata" : {
+      "guid" : "b9e42801-403a-498b-b9f0-0e05834278f4",
+      "createdAt" : [ 2022, 7, 15, 6, 6, 19 ],
+      "updatedAt" : [ 2023, 2, 16, 1, 45, 8 ]
+    },
+    "v3Metadata" : {
+      "annotations" : {
+        "mta_id" : "com.sap.bpm.pv.innvent",
+        "mta_version" : "0.0.1",
+        "mta_resource" : "{\"name\":\"projectApprovalTools-html5-app-host-service\"}"
+      },
+      "labels" : {
+        "mta_id" : "ebe1316c8b221a1f7f151aefcbc927a2"
+      }
+    },
+    "label" : "html5-apps-repo",
+    "plan" : "app-host",
+    "credentials" : "********",
+    "tags" : [ ],
+    "type" : "managed",
+    "lastOperation" : {
+      "type" : "CREATE",
+      "description" : "",
+      "state" : "SUCCEEDED"
+    },
+    "resourceName" : "projectApprovalTools-html5-app-host-service"
+  },
+  "resourceName" : "projectApprovalTools-html5-app-host-service"
+} ]#
+
+#2.0#2023 05 09 07:59:40.895#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.detectDeployedMtaTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4701###
+Step "Detect Deployed MTA" finished#
+
+#2.0#2023 05 09 07:59:40.915#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.collectSystemParametersTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4702###
+[CollectSystemParametersStep] Executing task "collectSystemParametersTask" of process "7346bf7d-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:40.916#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.collectSystemParametersTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4702###
+[CollectSystemParametersStep] Collecting system parameters...#
+
+#2.0#2023 05 09 07:59:40.916#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.collectSystemParametersTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4702###
+[CollectSystemParametersStep] Getting default domain...#
+
+#2.0#2023 05 09 07:59:40.950#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.collectSystemParametersTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4702###
+[CollectSystemParametersStep] Default domain: cfapps.sap.hana.ondemand.com#
+
+#2.0#2023 05 09 07:59:40.950#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.collectSystemParametersTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4702###
+[CollectSystemParametersStep] Checking for overwriting read-only parameters for mta with id: "com.sap.bpm.pv.innvent"#
+
+#2.0#2023 05 09 07:59:40.950#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.collectSystemParametersTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4702###
+[CollectSystemParametersStep] No read-only parameters are overwritten#
+
+#2.0#2023 05 09 07:59:40.966#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.collectSystemParametersTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4702###
+[CollectSystemParametersStep] Descriptor with system parameters: {
+  "majorSchemaVersion" : 3,
+  "schemaVersion" : "3.2.0",
+  "id" : "com.sap.bpm.pv.innvent",
+  "version" : "0.0.1",
+  "modules" : [ {
+    "majorSchemaVersion" : 3,
+    "name" : "uicontent",
+    "type" : "com.sap.application.content",
+    "path" : "uicontent",
+    "properties" : { },
+    "parameters" : {
+      "default-url" : "${protocol}://${default-uri}",
+      "default-app-name" : "uicontent",
+      "generated-password" : "********",
+      "default-uri" : "${host}.${domain}",
+      "default-instances" : 1,
+      "instances" : "${default-instances}",
+      "default-host" : "srk-spa-test-dev-uicontent",
+      "app-name" : "${default-app-name}",
+      "protocol" : "https",
+      "domain" : "${default-domain}",
+      "host" : "${default-host}",
+      "generated-user" : "********"
+    },
+    "requiredDependencies" : [ {
+      "majorSchemaVersion" : 3,
+      "name" : "projectApprovalTools-html5-app-host-service",
+      "properties" : { },
+      "parameters" : {
+        "content-target" : true
+      },
+      "propertiesMetadata" : {
+        "metadata" : { }
+      },
+      "parametersMetadata" : {
+        "metadata" : { }
+      }
+    } ],
+    "providedDependencies" : [ {
+      "majorSchemaVersion" : 3,
+      "name" : "uicontent",
+      "isPublic" : false,
+      "properties" : { },
+      "parameters" : { },
+      "propertiesMetadata" : {
+        "metadata" : { }
+      },
+      "parametersMetadata" : {
+        "metadata" : { }
+      }
+    } ],
+    "propertiesMetadata" : {
+      "metadata" : { }
+    },
+    "parametersMetadata" : {
+      "metadata" : { }
+    },
+    "hooks" : [ ]
+  } ],
+  "resources" : [ {
+    "majorSchemaVersion" : 3,
+    "name" : "projectApprovalTools-html5-app-host-service",
+    "type" : "org.cloudfoundry.managed-service",
+    "properties" : { },
+    "parameters" : {
+      "generated-password" : "********",
+      "service-name" : "${default-service-name}",
+      "service-plan" : "app-host",
+      "service" : "html5-apps-repo",
+      "generated-user" : "********",
+      "default-xsappname" : "projectApprovalTools-html5-app-host-service",
+      "type" : "managed-service",
+      "default-service-name" : "projectApprovalTools-html5-app-host-service",
+      "default-container-name" : "SRK_SPA_TEST_DEV_PROJECTAPPROVALTOOLS_HTML5_APP_HOST_SERVICE"
+    },
+    "isActive" : true,
+    "isOptional" : false,
+    "propertiesMetadata" : {
+      "metadata" : { }
+    },
+    "parametersMetadata" : {
+      "metadata" : { }
+    },
+    "requiredDependencies" : [ ]
+  } ],
+  "parameters" : {
+    "deploy_mode" : "html5-repo",
+    "authorization-url" : "********",
+    "org-guid" : "143a0db1-24cf-4288-8394-fa9fbdcc6856",
+    "org" : "srk-spa-test",
+    "deploy-target" : "srk-spa-test dev",
+    "space" : "dev",
+    "xs-api-url" : "https://api.cf.sap.hana.ondemand.com",
+    "deploy-url" : "deploy-service.cfapps.sap.hana.ondemand.com",
+    "xs-type" : "CF",
+    "default-domain" : "cfapps.sap.hana.ondemand.com",
+    "xs-auth-url" : "********",
+    "space-guid" : "095ecc29-cb57-4705-85dc-db3274cf74f5",
+    "user" : "********",
+    "controller-url" : "https://api.cf.sap.hana.ondemand.com",
+    "timestamp" : "20230509075940"
+  },
+  "parametersMetadata" : {
+    "metadata" : { }
+  }
+}#
+
+#2.0#2023 05 09 07:59:40.967#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.collectSystemParametersTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4702###
+[CollectSystemParametersStep] Version rule: SAME_HIGHER#
+
+#2.0#2023 05 09 07:59:40.967#Z#INFO#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.collectSystemParametersTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4702###
+[CollectSystemParametersStep] Detected new MTA version: "0.0.1"#
+
+#2.0#2023 05 09 07:59:40.970#Z#INFO#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.collectSystemParametersTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4702###
+[CollectSystemParametersStep] Deployed MTA version: "0.0.1"#
+
+#2.0#2023 05 09 07:59:40.973#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.collectSystemParametersTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4702###
+[CollectSystemParametersStep] MTA accepted for deployment#
+
+#2.0#2023 05 09 07:59:40.973#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.collectSystemParametersTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4702###
+[CollectSystemParametersStep] System parameters collected#
+
+#2.0#2023 05 09 07:59:40.973#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.collectSystemParametersTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4702###
+Step "Collect System Parameters" finished#
+
+#2.0#2023 05 09 07:59:40.998#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.processDescriptorTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4703###
+[ProcessDescriptorStep] Executing task "processDescriptorTask" of process "7346bf7d-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:40.999#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.processDescriptorTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4703###
+[ProcessDescriptorStep] Resolving properties and parameters in merged descriptor...#
+
+#2.0#2023 05 09 07:59:41.000#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.processDescriptorTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4703###
+[ProcessDescriptorStep] Subscriptions: [ ]#
+
+#2.0#2023 05 09 07:59:41.000#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.processDescriptorTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4703###
+[ProcessDescriptorStep] MTA Modules: [uicontent]#
+
+#2.0#2023 05 09 07:59:41.001#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.processDescriptorTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4703###
+[ProcessDescriptorStep] Resolved deployment descriptor: {
+  "majorSchemaVersion" : 3,
+  "schemaVersion" : "3.2.0",
+  "id" : "com.sap.bpm.pv.innvent",
+  "version" : "0.0.1",
+  "modules" : [ {
+    "majorSchemaVersion" : 3,
+    "name" : "uicontent",
+    "type" : "com.sap.application.content",
+    "path" : "uicontent",
+    "properties" : { },
+    "parameters" : {
+      "default-url" : "https://srk-spa-test-dev-uicontent.cfapps.sap.hana.ondemand.com",
+      "default-app-name" : "uicontent",
+      "generated-password" : "********",
+      "default-uri" : "srk-spa-test-dev-uicontent.cfapps.sap.hana.ondemand.com",
+      "default-instances" : 1,
+      "instances" : 1,
+      "default-host" : "srk-spa-test-dev-uicontent",
+      "app-name" : "uicontent",
+      "protocol" : "https",
+      "domain" : "cfapps.sap.hana.ondemand.com",
+      "host" : "srk-spa-test-dev-uicontent",
+      "generated-user" : "********"
+    },
+    "requiredDependencies" : [ {
+      "majorSchemaVersion" : 3,
+      "name" : "projectApprovalTools-html5-app-host-service",
+      "properties" : { },
+      "parameters" : {
+        "content-target" : true
+      },
+      "propertiesMetadata" : {
+        "metadata" : { }
+      },
+      "parametersMetadata" : {
+        "metadata" : { }
+      }
+    } ],
+    "providedDependencies" : [ {
+      "majorSchemaVersion" : 3,
+      "name" : "uicontent",
+      "isPublic" : false,
+      "properties" : { },
+      "parameters" : { },
+      "propertiesMetadata" : {
+        "metadata" : { }
+      },
+      "parametersMetadata" : {
+        "metadata" : { }
+      }
+    } ],
+    "propertiesMetadata" : {
+      "metadata" : { }
+    },
+    "parametersMetadata" : {
+      "metadata" : { }
+    },
+    "hooks" : [ ]
+  } ],
+  "resources" : [ {
+    "majorSchemaVersion" : 3,
+    "name" : "projectApprovalTools-html5-app-host-service",
+    "type" : "org.cloudfoundry.managed-service",
+    "properties" : { },
+    "parameters" : {
+      "generated-password" : "********",
+      "service-name" : "projectApprovalTools-html5-app-host-service",
+      "service-plan" : "app-host",
+      "service" : "html5-apps-repo",
+      "generated-user" : "********",
+      "default-xsappname" : "projectApprovalTools-html5-app-host-service",
+      "type" : "managed-service",
+      "default-service-name" : "projectApprovalTools-html5-app-host-service",
+      "default-container-name" : "SRK_SPA_TEST_DEV_PROJECTAPPROVALTOOLS_HTML5_APP_HOST_SERVICE"
+    },
+    "isActive" : true,
+    "isOptional" : false,
+    "propertiesMetadata" : {
+      "metadata" : { }
+    },
+    "parametersMetadata" : {
+      "metadata" : { }
+    },
+    "requiredDependencies" : [ ]
+  } ],
+  "parameters" : {
+    "deploy_mode" : "html5-repo",
+    "authorization-url" : "********",
+    "org-guid" : "143a0db1-24cf-4288-8394-fa9fbdcc6856",
+    "org" : "srk-spa-test",
+    "deploy-target" : "srk-spa-test dev",
+    "space" : "dev",
+    "xs-api-url" : "https://api.cf.sap.hana.ondemand.com",
+    "deploy-url" : "deploy-service.cfapps.sap.hana.ondemand.com",
+    "xs-type" : "CF",
+    "default-domain" : "cfapps.sap.hana.ondemand.com",
+    "xs-auth-url" : "********",
+    "space-guid" : "095ecc29-cb57-4705-85dc-db3274cf74f5",
+    "user" : "********",
+    "controller-url" : "https://api.cf.sap.hana.ondemand.com",
+    "timestamp" : "20230509075940"
+  },
+  "parametersMetadata" : {
+    "metadata" : { }
+  }
+}#
+
+#2.0#2023 05 09 07:59:41.001#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.processDescriptorTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4703###
+[ProcessDescriptorStep] Merged descriptor properties and parameters resolved#
+
+#2.0#2023 05 09 07:59:41.001#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.processDescriptorTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4703###
+Step "Process Descriptor Step" finished#
+
+#2.0#2023 05 09 07:59:41.027#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildDeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4704###
+[XS2BuildCloudDeployModelStep] Executing task "buildDeployModelTask" of process "7346bf7d-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:41.028#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildDeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4704###
+[XS2BuildCloudDeployModelStep] Service keys defined for content deployment grouped by service name: {
+  "projectApprovalTools-html5-app-host-service" : [ {
+    "name" : "********",
+    "v3Metadata" : {
+      "annotations" : {
+        "mta_id" : "com.sap.bpm.pv.innvent",
+        "mta_version" : "0.0.1"
+      },
+      "labels" : {
+        "mta_id" : "ebe1316c8b221a1f7f151aefcbc927a2",
+        "space_guid" : "095ecc29-cb57-4705-85dc-db3274cf74f5"
+      }
+    },
+    "credentials" : "********",
+    "moduleName" : "uicontent",
+    "resourceName" : "projectApprovalTools-html5-app-host-service",
+    "serviceInstance" : {
+      "isOptional" : false,
+      "isManaged" : false,
+      "name" : "projectApprovalTools-html5-app-host-service",
+      "credentials" : "********",
+      "tags" : [ ],
+      "shouldSkipParametersUpdate" : false,
+      "shouldSkipPlanUpdate" : false,
+      "shouldSkipTagsUpdate" : false,
+      "shouldSkipSyslogUrlUpdate" : false
+    }
+  } ]
+}#
+
+#2.0#2023 05 09 07:59:41.028#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildDeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4704###
+[XS2BuildCloudDeployModelStep] Building cloud deployment model...#
+
+#2.0#2023 05 09 07:59:41.029#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildDeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4704###
+[XS2BuildCloudDeployModelStep] MTA archive modules: [uicontent]#
+
+#2.0#2023 05 09 07:59:41.029#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildDeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4704###
+[XS2BuildCloudDeployModelStep] Deployed modules: []#
+
+#2.0#2023 05 09 07:59:41.030#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildDeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4704###
+[XS2BuildCloudDeployModelStep] MTA modules: [uicontent]#
+
+#2.0#2023 05 09 07:59:41.030#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildDeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4704###
+[XS2BuildCloudDeployModelStep] Service keys to create: {
+  "projectApprovalTools-html5-app-host-service" : [ ]
+}#
+
+#2.0#2023 05 09 07:59:41.031#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildDeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4704###
+[XS2BuildCloudDeployModelStep] Modules to deploy: [{
+  "majorSchemaVersion" : 3,
+  "name" : "uicontent",
+  "type" : "com.sap.application.content",
+  "path" : "uicontent",
+  "properties" : { },
+  "parameters" : {
+    "default-url" : "https://srk-spa-test-dev-uicontent.cfapps.sap.hana.ondemand.com",
+    "default-app-name" : "uicontent",
+    "generated-password" : "********",
+    "default-uri" : "srk-spa-test-dev-uicontent.cfapps.sap.hana.ondemand.com",
+    "default-instances" : 1,
+    "instances" : 1,
+    "default-host" : "srk-spa-test-dev-uicontent",
+    "app-name" : "uicontent",
+    "protocol" : "https",
+    "dependency-type" : "soft",
+    "domain" : "cfapps.sap.hana.ondemand.com",
+    "host" : "srk-spa-test-dev-uicontent",
+    "generated-user" : "********"
+  },
+  "requiredDependencies" : [ {
+    "majorSchemaVersion" : 3,
+    "name" : "projectApprovalTools-html5-app-host-service",
+    "properties" : { },
+    "parameters" : {
+      "content-target" : true
+    },
+    "propertiesMetadata" : {
+      "metadata" : { }
+    },
+    "parametersMetadata" : {
+      "metadata" : { }
+    }
+  } ],
+  "providedDependencies" : [ {
+    "majorSchemaVersion" : 3,
+    "name" : "uicontent",
+    "isPublic" : false,
+    "properties" : { },
+    "parameters" : { },
+    "propertiesMetadata" : {
+      "metadata" : { }
+    },
+    "parametersMetadata" : {
+      "metadata" : { }
+    }
+  } ],
+  "propertiesMetadata" : {
+    "metadata" : { }
+  },
+  "parametersMetadata" : {
+    "metadata" : { }
+  },
+  "hooks" : [ ]
+}]#
+
+#2.0#2023 05 09 07:59:41.031#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildDeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4704###
+[XS2BuildCloudDeployModelStep] Custom domains: []#
+
+#2.0#2023 05 09 07:59:41.031#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildDeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4704###
+[XS2BuildCloudDeployModelStep] Detecting service keys to delete.#
+
+#2.0#2023 05 09 07:59:41.032#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildDeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4704###
+[XS2BuildCloudDeployModelStep] Detected deployed service keys by service "{projectApprovalTools-html5-app-host-service=[DeployedMtaServiceKey{name=uicontent-projectApprovalTools-html5-app-host-service-credentials, metadata=CloudMetadata{guid=1d248229-806e-4389-9fb3-7b78519557d1, createdAt=2023-05-02T11:51:03, updatedAt=2023-05-02T11:51:03, url=null}, v3Metadata=Metadata{annotations={mta_id=com.sap.bpm.pv.innvent, mta_version=0.0.1}, labels={mta_id=ebe1316c8b221a1f7f151aefcbc927a2, space_guid=095ecc29-cb57-4705-85dc-db3274cf74f5}}, credentials=null, serviceInstance=CloudServiceInstance{name=projectApprovalTools-html5-app-host-service, metadata=CloudMetadata{guid=b9e42801-403a-498b-b9f0-0e05834278f4, createdAt=2022-07-15T06:06:19, updatedAt=2023-02-16T01:45:08, url=null}, v3Metadata=Metadata{annotations={mta_id=com.sap.bpm.pv.innvent, mta_version=0.0.1, mta_resource={"name":"projectApprovalTools-html5-app-host-service"}}, labels={mta_id=ebe1316c8b221a1f7f151aefcbc927a2}}, label=html5-apps-repo, plan=app-host, provider=null, broker=null, version=null, credentials={}, syslogDrainUrl=null, tags=[], type=managed, lastOperation=create succeeded}, serviceKeyOperation=null, resourceName=projectApprovalTools-html5-app-host-service}]}"#
+
+#2.0#2023 05 09 07:59:41.034#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildDeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4704###
+[XS2BuildCloudDeployModelStep] New service keys by service "{projectApprovalTools-html5-app-host-service=[uicontent-projectApprovalTools-html5-app-host-service-credentials]}"#
+
+#2.0#2023 05 09 07:59:41.034#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildDeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4704###
+[XS2BuildCloudDeployModelStep] Existing service keys by service "{}"#
+
+#2.0#2023 05 09 07:59:41.034#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildDeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4704###
+[XS2BuildCloudDeployModelStep] Detected service keys to delete "[]"#
+
+#2.0#2023 05 09 07:59:41.035#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildDeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4704###
+[XS2BuildCloudDeployModelStep] Calculating resource batches...#
+
+#2.0#2023 05 09 07:59:41.035#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildDeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4704###
+[XS2BuildCloudDeployModelStep] Calculating resource batches completed.#
+
+#2.0#2023 05 09 07:59:41.035#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildDeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4704###
+[XS2BuildCloudDeployModelStep] Cloud deployment model built#
+
+#2.0#2023 05 09 07:59:41.035#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildDeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4704###
+Step "Build Deploy Model" finished#
+
+#2.0#2023 05 09 07:59:41.065#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildUndeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4705###
+[BuildCloudUndeployModelStep] Executing task "buildUndeployModelTask" of process "7346bf7d-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:41.066#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildUndeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4705###
+[BuildCloudUndeployModelStep] Building cloud undeployment model...#
+
+#2.0#2023 05 09 07:59:41.068#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildUndeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4705###
+[BuildCloudUndeployModelStep] MTA modules: [uicontent]#
+
+#2.0#2023 05 09 07:59:41.068#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildUndeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4705###
+[BuildCloudUndeployModelStep] Modules to undeploy: [ ]#
+
+#2.0#2023 05 09 07:59:41.068#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildUndeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4705###
+[BuildCloudUndeployModelStep] Modules that wont be changed: {0}#
+
+#2.0#2023 05 09 07:59:41.069#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildUndeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4705###
+[BuildCloudUndeployModelStep] Subscriptions to delete: [ ]#
+
+#2.0#2023 05 09 07:59:41.070#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildUndeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4705###
+[BuildCloudUndeployModelStep] Cloud services to delete: []#
+
+#2.0#2023 05 09 07:59:41.070#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildUndeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4705###
+[BuildCloudUndeployModelStep] Cloud applications to undeploy: [ ]#
+
+#2.0#2023 05 09 07:59:41.070#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildUndeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4705###
+[BuildCloudUndeployModelStep] Cloud undeployment model built#
+
+#2.0#2023 05 09 07:59:41.070#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildUndeployModelTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4705###
+Step "Build Undeploy Model" finished#
+
+#2.0#2023 05 09 07:59:41.099#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.addDomainsTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4706###
+[AddDomainsStep] Executing task "addDomainsTask" of process "7346bf7d-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:41.099#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.addDomainsTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4706###
+[AddDomainsStep] Custom domains: []#
+
+#2.0#2023 05 09 07:59:41.100#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.addDomainsTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4706###
+Step "Add Domains" finished#
+
+#2.0#2023 05 09 07:59:41.209#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.prepareModulesDeploymentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4708###
+[ExtractBatchedServicesStep] Executing task "prepareModulesDeploymentTask" of process "73cb58bb-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:41.210#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.prepareModulesDeploymentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4708###
+[ExtractBatchedServicesStep] Extracting services from batch#
+
+#2.0#2023 05 09 07:59:41.210#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.prepareModulesDeploymentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4708###
+[ExtractBatchedServicesStep] Services to create: [ {
+  "isOptional" : false,
+  "isManaged" : true,
+  "name" : "projectApprovalTools-html5-app-host-service",
+  "v3Metadata" : {
+    "annotations" : {
+      "mta_id" : "com.sap.bpm.pv.innvent",
+      "mta_version" : "0.0.1",
+      "mta_resource" : "{\"name\":\"projectApprovalTools-html5-app-host-service\"}"
+    },
+    "labels" : {
+      "mta_id" : "ebe1316c8b221a1f7f151aefcbc927a2"
+    }
+  },
+  "label" : "html5-apps-repo",
+  "plan" : "app-host",
+  "credentials" : "********",
+  "tags" : [ ],
+  "type" : "managed",
+  "resourceName" : "projectApprovalTools-html5-app-host-service",
+  "shouldSkipParametersUpdate" : false,
+  "shouldSkipPlanUpdate" : false,
+  "shouldSkipTagsUpdate" : false,
+  "shouldSkipSyslogUrlUpdate" : false
+} ]#
+
+#2.0#2023 05 09 07:59:41.210#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.prepareModulesDeploymentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4708###
+Step "Extract Services From Batches" finished#
+
+#2.0#2023 05 09 07:59:41.268#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.CheckServiceOperationStateTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4710###
+[CheckServiceOperationStateStep] Executing task "CheckServiceOperationStateTask" of process "73da9b26-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:41.268#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.CheckServiceOperationStateTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4710###
+[CheckServiceOperationStateStep] Getting service instance "projectApprovalTools-html5-app-host-service"...#
+
+#2.0#2023 05 09 07:59:41.500#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.CheckServiceOperationStateTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4710###
+Step "Check for service operations in Progress" finished#
+
+#2.0#2023 05 09 07:59:41.531#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.DetermineServiceCreateUpdateActionsTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4711###
+[DetermineServiceCreateUpdateServiceActionsStep] Executing task "DetermineServiceCreateUpdateActionsTask" of process "73da9b26-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:41.532#Z#INFO#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.DetermineServiceCreateUpdateActionsTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4711###
+[DetermineServiceCreateUpdateServiceActionsStep] Processing service "projectApprovalTools-html5-app-host-service"...#
+
+#2.0#2023 05 09 07:59:41.535#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.DetermineServiceCreateUpdateActionsTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4711###
+[DetermineServiceCreateUpdateServiceActionsStep] Getting service instance "projectApprovalTools-html5-app-host-service"...#
+
+#2.0#2023 05 09 07:59:41.754#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.DetermineServiceCreateUpdateActionsTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4711###
+[DetermineServiceCreateUpdateServiceActionsStep] Existing service: {
+  "name" : "projectApprovalTools-html5-app-host-service",
+  "metadata" : {
+    "guid" : "b9e42801-403a-498b-b9f0-0e05834278f4",
+    "createdAt" : [ 2022, 7, 15, 6, 6, 19 ],
+    "updatedAt" : [ 2023, 2, 16, 1, 45, 8 ]
+  },
+  "v3Metadata" : {
+    "annotations" : {
+      "mta_id" : "com.sap.bpm.pv.innvent",
+      "mta_version" : "0.0.1",
+      "mta_resource" : "{\"name\":\"projectApprovalTools-html5-app-host-service\"}"
+    },
+    "labels" : {
+      "mta_id" : "ebe1316c8b221a1f7f151aefcbc927a2"
+    }
+  },
+  "label" : "html5-apps-repo",
+  "plan" : "app-host",
+  "credentials" : "********",
+  "tags" : [ ],
+  "type" : "managed",
+  "lastOperation" : {
+    "type" : "CREATE",
+    "description" : "",
+    "state" : "SUCCEEDED"
+  }
+}#
+
+#2.0#2023 05 09 07:59:41.754#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.DetermineServiceCreateUpdateActionsTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4711###
+[DetermineServiceCreateUpdateServiceActionsStep] Getting parameters of service instance "b9e42801-403a-498b-b9f0-0e05834278f4"...#
+
+#2.0#2023 05 09 07:59:41.786#Z#WARN#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.DetermineServiceCreateUpdateActionsTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4711###
+[DetermineServiceCreateUpdateServiceActionsStep] Cannot retrieve service instance parameters of service "projectApprovalTools-html5-app-host-service"#
+
+#2.0#2023 05 09 07:59:41.786#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.DetermineServiceCreateUpdateActionsTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4711###
+Step "Determine update actions" finished#
+
+#2.0#2023 05 09 07:59:41.956#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.prepareModulesDeploymentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4714###
+[PrepareModulesDeploymentStep] Executing task "prepareModulesDeploymentTask" of process "7441c199-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:41.956#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.prepareModulesDeploymentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4714###
+[PrepareModulesDeploymentStep] Preparing modules deployment...#
+
+#2.0#2023 05 09 07:59:41.958#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.prepareModulesDeploymentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4714###
+Step "Prepare Modules Deployment" finished#
+
+#2.0#2023 05 09 07:59:42.138#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildContentDeploymentConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4716###
+[BuildContentDeploymentConfigurationStep] Executing task "buildContentDeploymentConfigurationTask" of process "74534d5e-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:42.142#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildContentDeploymentConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4716###
+[BuildContentDeploymentConfigurationStep] Getting service key "uicontent-projectApprovalTools-html5-app-host-service-credentials" for service instance "projectApprovalTools-html5-app-host-service"...#
+
+#2.0#2023 05 09 07:59:42.483#Z#INFO#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildContentDeploymentConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4716###
+[BuildContentDeploymentConfigurationStep] Service key "uicontent-projectApprovalTools-html5-app-host-service-credentials" for service "projectApprovalTools-html5-app-host-service" already exists#
+
+#2.0#2023 05 09 07:59:42.488#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildContentDeploymentConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4716###
+Step "Build Content Deployment Configuration" finished#
+
+#2.0#2023 05 09 07:59:42.493#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.createContentDeployClientConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4716###
+[CreateContentDeployClientConfigurationStep] Executing task "createContentDeployClientConfigurationTask" of process "7499093c-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:42.493#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.createContentDeployClientConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4716###
+[CreateContentDeployClientConfigurationStep] Content deployer client configuration: {
+  "contentDeployerUrl" : "https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com",
+  "uaaClientConfiguration" : {
+    "url" : "********",
+    "useCertificateBasedAuthentication" : "********",
+    "credentials" : "********"
+  },
+  "httpRequestHeaders" : {
+    "X-CorrelationID" : "7346984d-ee3f-11ed-9a43-eeee0a8e3113"
+  }
+}#
+
+#2.0#2023 05 09 07:59:44.671#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.createContentDeployClientConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4716###
+Step "Create Content Deploy Client Configuration" finished#
+
+#2.0#2023 05 09 07:59:44.674#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.getContentFromDeploymentDescriptorTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4716###
+[GetContentFromDeploymentDescriptorStep] Executing task "getContentFromDeploymentDescriptorTask" of process "7499093c-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:44.674#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.getContentFromDeploymentDescriptorTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4716###
+Step "Get Content From Deployment Descriptor" finished#
+
+#2.0#2023 05 09 07:59:44.675#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.uploadContentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4716###
+[UploadContentStep] Executing task "uploadContentTask" of process "7499093c-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:44.676#Z#INFO#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.uploadContentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4716###
+[UploadContentStep] Uploading content module "uicontent" in target service "projectApprovalTools-html5-app-host-service"...#
+
+#2.0#2023 05 09 07:59:44.678#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.uploadContentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4716###
+[UploadContentStep] Uploading file "uicontent/resources/data.zip" for content module "uicontent" in service "projectApprovalTools-html5-app-host-service"#
+
+#2.0#2023 05 09 07:59:44.868#Z#ERROR#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.uploadContentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4716###
+Exception caught#
+
+org.cloudfoundry.multiapps.common.SLException: Error uploading content module "uicontent" in service "projectApprovalTools-html5-app-host-service": org.cloudfoundry.multiapps.controller.persistence.services.FileStorageException: com.sap.cloud.lm.sl.xs2.content.client.ContentDeployerException: Operation 'Upload File' to the URL 'https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com/v2/files/upload' failed. Remote server responded with HTTP status code 500, error message: 'Upload application content failed { CODE: '1001' }', error type 'Bad Request' 
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.processException(SyncFlowableStep.java:131) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.onStepError(SyncFlowableStep.java:126) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.handleException(SyncFlowableStep.java:102) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.executeInternal(SyncFlowableStep.java:81) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.lambda$execute$0(SyncFlowableStep.java:65) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.core.util.LoggingUtil.logWithCorrelationId(LoggingUtil.java:14) ~[multiapps-controller-core-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.execute(SyncFlowableStep.java:65) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.flowable.engine.impl.delegate.invocation.JavaDelegateInvocation.invoke(JavaDelegateInvocation.java:35) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.delegate.invocation.DelegateInvocation.proceed(DelegateInvocation.java:32) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.delegate.invocation.DefaultDelegateInterceptor.handleInvocation(DefaultDelegateInterceptor.java:26) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.bpmn.behavior.ServiceTaskDelegateExpressionActivityBehavior.execute(ServiceTaskDelegateExpressionActivityBehavior.java:157) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.agenda.ContinueProcessOperation.executeActivityBehavior(ContinueProcessOperation.java:313) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.agenda.ContinueProcessOperation.executeSynchronous(ContinueProcessOperation.java:170) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.agenda.ContinueProcessOperation.continueThroughFlowNode(ContinueProcessOperation.java:125) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.agenda.ContinueProcessOperation.run(ContinueProcessOperation.java:88) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.AbstractEngineConfiguration.lambda$new$0(AbstractEngineConfiguration.java:173) ~[flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.executeOperation(CommandInvoker.java:97) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.executeOperations(CommandInvoker.java:81) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:64) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.interceptor.BpmnOverrideContextInterceptor.execute(BpmnOverrideContextInterceptor.java:26) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.interceptor.TransactionContextInterceptor.execute(TransactionContextInterceptor.java:53) ~[flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:83) ~[flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.common.spring.SpringTransactionInterceptor.lambda$execute$0(SpringTransactionInterceptor.java:57) ~[flowable-spring-common-6.6.0.jar:6.6.0]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) [spring-tx-5.3.26.jar:5.3.26]
+	at org.flowable.common.spring.SpringTransactionInterceptor.execute(SpringTransactionInterceptor.java:57) [flowable-spring-common-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:30) [flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:56) [flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:51) [flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.job.service.impl.asyncexecutor.ExecuteAsyncRunnable.executeJob(ExecuteAsyncRunnable.java:127) [flowable-job-service-6.6.0.jar:6.6.0]
+	at org.flowable.job.service.impl.asyncexecutor.ExecuteAsyncRunnable.run(ExecuteAsyncRunnable.java:115) [flowable-job-service-6.6.0.jar:6.6.0]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:?]
+	at java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.cloudfoundry.multiapps.controller.persistence.services.FileStorageException: org.cloudfoundry.multiapps.controller.persistence.services.FileStorageException: com.sap.cloud.lm.sl.xs2.content.client.ContentDeployerException: Operation 'Upload File' to the URL 'https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com/v2/files/upload' failed. Remote server responded with HTTP status code 500, error message: 'Upload application content failed { CODE: '1001' }', error type 'Bad Request'
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processFileContent(ObjectStoreFileStorage.java:111) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.processFileContent(FileService.java:137) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.consumeFileContent(FileService.java:130) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.uploadContent(UploadContentStep.java:78) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.executeStep(UploadContentStep.java:61) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.executeInternal(SyncFlowableStep.java:75) ~[multiapps-controller-process-1.152.2.jar:?]
+	... 29 more
+Caused by: org.cloudfoundry.multiapps.controller.persistence.services.FileStorageException: com.sap.cloud.lm.sl.xs2.content.client.ContentDeployerException: Operation 'Upload File' to the URL 'https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com/v2/files/upload' failed. Remote server responded with HTTP status code 500, error message: 'Upload application content failed { CODE: '1001' }', error type 'Bad Request'
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processContent(ObjectStoreFileStorage.java:126) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processFileContent(ObjectStoreFileStorage.java:109) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.processFileContent(FileService.java:137) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.consumeFileContent(FileService.java:130) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.uploadContent(UploadContentStep.java:78) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.executeStep(UploadContentStep.java:61) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.executeInternal(SyncFlowableStep.java:75) ~[multiapps-controller-process-1.152.2.jar:?]
+	... 29 more
+Caused by: com.sap.cloud.lm.sl.xs2.content.client.ContentDeployerException: Operation 'Upload File' to the URL 'https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com/v2/files/upload' failed. Remote server responded with HTTP status code 500, error message: 'Upload application content failed { CODE: '1001' }', error type 'Bad Request'
+	at com.sap.cloud.lm.sl.xs2.content.client.impl.GACDClientV2Impl.uploadContent(GACDClientV2Impl.java:71) ~[com.sap.cloud.lm.sl.xs2.content-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.upload(UploadContentStep.java:91) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.lambda$uploadContent$0(UploadContentStep.java:83) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.lambda$consumeFileContent$0(FileService.java:131) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processContent(ObjectStoreFileStorage.java:124) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processFileContent(ObjectStoreFileStorage.java:109) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.processFileContent(FileService.java:137) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.consumeFileContent(FileService.java:130) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.uploadContent(UploadContentStep.java:78) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.executeStep(UploadContentStep.java:61) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.executeInternal(SyncFlowableStep.java:75) ~[multiapps-controller-process-1.152.2.jar:?]
+	... 29 more
+Caused by: com.sap.lm.sl.alm.ts.gacd.client.GacClientException: Operation 'Upload File' to the URL 'https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com/v2/files/upload' failed. Remote server responded with HTTP status code 500, error message: 'Upload application content failed { CODE: '1001' }', error type 'Bad Request'
+	at com.sap.lm.sl.alm.ts.gacd.client.RestHelper.handleResponse(RestHelper.java:78) ~[alm-ts-gacd-1.51.2.jar:1.51.2]
+	at com.sap.lm.sl.alm.ts.gacd.client.RestHelper.doMultipartPost(RestHelper.java:183) ~[alm-ts-gacd-1.51.2.jar:1.51.2]
+	at com.sap.lm.sl.alm.ts.gacd.client.v2.GacDeployClientV2.uploadFile(GacDeployClientV2.java:108) ~[alm-ts-gacd-1.51.2.jar:1.51.2]
+	at com.sap.cloud.lm.sl.xs2.content.client.impl.GACDClientV2Impl.uploadContent(GACDClientV2Impl.java:68) ~[com.sap.cloud.lm.sl.xs2.content-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.upload(UploadContentStep.java:91) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.lambda$uploadContent$0(UploadContentStep.java:83) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.lambda$consumeFileContent$0(FileService.java:131) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processContent(ObjectStoreFileStorage.java:124) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processFileContent(ObjectStoreFileStorage.java:109) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.processFileContent(FileService.java:137) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.consumeFileContent(FileService.java:130) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.uploadContent(UploadContentStep.java:78) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.executeStep(UploadContentStep.java:61) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.executeInternal(SyncFlowableStep.java:75) ~[multiapps-controller-process-1.152.2.jar:?]
+	... 29 more
+#2.0#2023 05 09 07:59:44.873#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.uploadContentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4716###
+Step "Upload Content" finished#
+
+#2.0#2023 05 09 07:59:47.842#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildContentDeploymentConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4728###
+[BuildContentDeploymentConfigurationStep] Executing task "buildContentDeploymentConfigurationTask" of process "74534d5e-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:47.938#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildContentDeploymentConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4728###
+[BuildContentDeploymentConfigurationStep] Getting service key "uicontent-projectApprovalTools-html5-app-host-service-credentials" for service instance "projectApprovalTools-html5-app-host-service"...#
+
+#2.0#2023 05 09 07:59:48.270#Z#INFO#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildContentDeploymentConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4728###
+[BuildContentDeploymentConfigurationStep] Service key "uicontent-projectApprovalTools-html5-app-host-service-credentials" for service "projectApprovalTools-html5-app-host-service" already exists#
+
+#2.0#2023 05 09 07:59:48.276#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildContentDeploymentConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4728###
+Step "Build Content Deployment Configuration" finished#
+
+#2.0#2023 05 09 07:59:48.280#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.createContentDeployClientConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4728###
+[CreateContentDeployClientConfigurationStep] Executing task "createContentDeployClientConfigurationTask" of process "780c5e5c-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:48.283#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.createContentDeployClientConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4728###
+[CreateContentDeployClientConfigurationStep] Content deployer client configuration: {
+  "contentDeployerUrl" : "https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com",
+  "uaaClientConfiguration" : {
+    "url" : "********",
+    "useCertificateBasedAuthentication" : "********",
+    "credentials" : "********"
+  },
+  "httpRequestHeaders" : {
+    "X-CorrelationID" : "7346984d-ee3f-11ed-9a43-eeee0a8e3113"
+  }
+}#
+
+#2.0#2023 05 09 07:59:48.450#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.createContentDeployClientConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4728###
+Step "Create Content Deploy Client Configuration" finished#
+
+#2.0#2023 05 09 07:59:48.452#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.getContentFromDeploymentDescriptorTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4728###
+[GetContentFromDeploymentDescriptorStep] Executing task "getContentFromDeploymentDescriptorTask" of process "780c5e5c-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:48.453#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.getContentFromDeploymentDescriptorTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4728###
+Step "Get Content From Deployment Descriptor" finished#
+
+#2.0#2023 05 09 07:59:48.454#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.uploadContentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4728###
+[UploadContentStep] Executing task "uploadContentTask" of process "780c5e5c-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:48.454#Z#INFO#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.uploadContentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4728###
+[UploadContentStep] Uploading content module "uicontent" in target service "projectApprovalTools-html5-app-host-service"...#
+
+#2.0#2023 05 09 07:59:48.457#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.uploadContentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4728###
+[UploadContentStep] Uploading file "uicontent/resources/data.zip" for content module "uicontent" in service "projectApprovalTools-html5-app-host-service"#
+
+#2.0#2023 05 09 07:59:48.636#Z#ERROR#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.uploadContentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4728###
+Exception caught#
+
+org.cloudfoundry.multiapps.common.SLException: Error uploading content module "uicontent" in service "projectApprovalTools-html5-app-host-service": org.cloudfoundry.multiapps.controller.persistence.services.FileStorageException: com.sap.cloud.lm.sl.xs2.content.client.ContentDeployerException: Operation 'Upload File' to the URL 'https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com/v2/files/upload' failed. Remote server responded with HTTP status code 500, error message: 'Upload application content failed { CODE: '1001' }', error type 'Bad Request' 
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.processException(SyncFlowableStep.java:131) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.onStepError(SyncFlowableStep.java:126) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.handleException(SyncFlowableStep.java:102) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.executeInternal(SyncFlowableStep.java:81) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.lambda$execute$0(SyncFlowableStep.java:65) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.core.util.LoggingUtil.logWithCorrelationId(LoggingUtil.java:14) ~[multiapps-controller-core-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.execute(SyncFlowableStep.java:65) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.flowable.engine.impl.delegate.invocation.JavaDelegateInvocation.invoke(JavaDelegateInvocation.java:35) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.delegate.invocation.DelegateInvocation.proceed(DelegateInvocation.java:32) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.delegate.invocation.DefaultDelegateInterceptor.handleInvocation(DefaultDelegateInterceptor.java:26) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.bpmn.behavior.ServiceTaskDelegateExpressionActivityBehavior.execute(ServiceTaskDelegateExpressionActivityBehavior.java:157) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.agenda.ContinueProcessOperation.executeActivityBehavior(ContinueProcessOperation.java:313) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.agenda.ContinueProcessOperation.executeSynchronous(ContinueProcessOperation.java:170) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.agenda.ContinueProcessOperation.continueThroughFlowNode(ContinueProcessOperation.java:125) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.agenda.ContinueProcessOperation.run(ContinueProcessOperation.java:88) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.AbstractEngineConfiguration.lambda$new$0(AbstractEngineConfiguration.java:173) ~[flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.executeOperation(CommandInvoker.java:97) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.executeOperations(CommandInvoker.java:81) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:64) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.interceptor.BpmnOverrideContextInterceptor.execute(BpmnOverrideContextInterceptor.java:26) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.interceptor.TransactionContextInterceptor.execute(TransactionContextInterceptor.java:53) ~[flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:83) ~[flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.common.spring.SpringTransactionInterceptor.lambda$execute$0(SpringTransactionInterceptor.java:57) ~[flowable-spring-common-6.6.0.jar:6.6.0]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) [spring-tx-5.3.26.jar:5.3.26]
+	at org.flowable.common.spring.SpringTransactionInterceptor.execute(SpringTransactionInterceptor.java:57) [flowable-spring-common-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:30) [flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:56) [flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:51) [flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.job.service.impl.asyncexecutor.ExecuteAsyncRunnable.executeJob(ExecuteAsyncRunnable.java:127) [flowable-job-service-6.6.0.jar:6.6.0]
+	at org.flowable.job.service.impl.asyncexecutor.ExecuteAsyncRunnable.run(ExecuteAsyncRunnable.java:115) [flowable-job-service-6.6.0.jar:6.6.0]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:?]
+	at java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.cloudfoundry.multiapps.controller.persistence.services.FileStorageException: org.cloudfoundry.multiapps.controller.persistence.services.FileStorageException: com.sap.cloud.lm.sl.xs2.content.client.ContentDeployerException: Operation 'Upload File' to the URL 'https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com/v2/files/upload' failed. Remote server responded with HTTP status code 500, error message: 'Upload application content failed { CODE: '1001' }', error type 'Bad Request'
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processFileContent(ObjectStoreFileStorage.java:111) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.processFileContent(FileService.java:137) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.consumeFileContent(FileService.java:130) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.uploadContent(UploadContentStep.java:78) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.executeStep(UploadContentStep.java:61) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.executeInternal(SyncFlowableStep.java:75) ~[multiapps-controller-process-1.152.2.jar:?]
+	... 29 more
+Caused by: org.cloudfoundry.multiapps.controller.persistence.services.FileStorageException: com.sap.cloud.lm.sl.xs2.content.client.ContentDeployerException: Operation 'Upload File' to the URL 'https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com/v2/files/upload' failed. Remote server responded with HTTP status code 500, error message: 'Upload application content failed { CODE: '1001' }', error type 'Bad Request'
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processContent(ObjectStoreFileStorage.java:126) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processFileContent(ObjectStoreFileStorage.java:109) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.processFileContent(FileService.java:137) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.consumeFileContent(FileService.java:130) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.uploadContent(UploadContentStep.java:78) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.executeStep(UploadContentStep.java:61) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.executeInternal(SyncFlowableStep.java:75) ~[multiapps-controller-process-1.152.2.jar:?]
+	... 29 more
+Caused by: com.sap.cloud.lm.sl.xs2.content.client.ContentDeployerException: Operation 'Upload File' to the URL 'https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com/v2/files/upload' failed. Remote server responded with HTTP status code 500, error message: 'Upload application content failed { CODE: '1001' }', error type 'Bad Request'
+	at com.sap.cloud.lm.sl.xs2.content.client.impl.GACDClientV2Impl.uploadContent(GACDClientV2Impl.java:71) ~[com.sap.cloud.lm.sl.xs2.content-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.upload(UploadContentStep.java:91) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.lambda$uploadContent$0(UploadContentStep.java:83) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.lambda$consumeFileContent$0(FileService.java:131) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processContent(ObjectStoreFileStorage.java:124) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processFileContent(ObjectStoreFileStorage.java:109) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.processFileContent(FileService.java:137) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.consumeFileContent(FileService.java:130) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.uploadContent(UploadContentStep.java:78) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.executeStep(UploadContentStep.java:61) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.executeInternal(SyncFlowableStep.java:75) ~[multiapps-controller-process-1.152.2.jar:?]
+	... 29 more
+Caused by: com.sap.lm.sl.alm.ts.gacd.client.GacClientException: Operation 'Upload File' to the URL 'https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com/v2/files/upload' failed. Remote server responded with HTTP status code 500, error message: 'Upload application content failed { CODE: '1001' }', error type 'Bad Request'
+	at com.sap.lm.sl.alm.ts.gacd.client.RestHelper.handleResponse(RestHelper.java:78) ~[alm-ts-gacd-1.51.2.jar:1.51.2]
+	at com.sap.lm.sl.alm.ts.gacd.client.RestHelper.doMultipartPost(RestHelper.java:183) ~[alm-ts-gacd-1.51.2.jar:1.51.2]
+	at com.sap.lm.sl.alm.ts.gacd.client.v2.GacDeployClientV2.uploadFile(GacDeployClientV2.java:108) ~[alm-ts-gacd-1.51.2.jar:1.51.2]
+	at com.sap.cloud.lm.sl.xs2.content.client.impl.GACDClientV2Impl.uploadContent(GACDClientV2Impl.java:68) ~[com.sap.cloud.lm.sl.xs2.content-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.upload(UploadContentStep.java:91) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.lambda$uploadContent$0(UploadContentStep.java:83) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.lambda$consumeFileContent$0(FileService.java:131) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processContent(ObjectStoreFileStorage.java:124) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processFileContent(ObjectStoreFileStorage.java:109) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.processFileContent(FileService.java:137) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.consumeFileContent(FileService.java:130) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.uploadContent(UploadContentStep.java:78) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.executeStep(UploadContentStep.java:61) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.executeInternal(SyncFlowableStep.java:75) ~[multiapps-controller-process-1.152.2.jar:?]
+	... 29 more
+#2.0#2023 05 09 07:59:48.641#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.uploadContentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4728###
+Step "Upload Content" finished#
+
+#2.0#2023 05 09 07:59:52.229#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildContentDeploymentConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4729###
+[BuildContentDeploymentConfigurationStep] Executing task "buildContentDeploymentConfigurationTask" of process "74534d5e-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:52.363#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildContentDeploymentConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4729###
+[BuildContentDeploymentConfigurationStep] Getting service key "uicontent-projectApprovalTools-html5-app-host-service-credentials" for service instance "projectApprovalTools-html5-app-host-service"...#
+
+#2.0#2023 05 09 07:59:52.652#Z#INFO#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildContentDeploymentConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4729###
+[BuildContentDeploymentConfigurationStep] Service key "uicontent-projectApprovalTools-html5-app-host-service-credentials" for service "projectApprovalTools-html5-app-host-service" already exists#
+
+#2.0#2023 05 09 07:59:52.655#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildContentDeploymentConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4729###
+Step "Build Content Deployment Configuration" finished#
+
+#2.0#2023 05 09 07:59:52.659#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.createContentDeployClientConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4729###
+[CreateContentDeployClientConfigurationStep] Executing task "createContentDeployClientConfigurationTask" of process "7aa88c2c-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:52.660#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.createContentDeployClientConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4729###
+[CreateContentDeployClientConfigurationStep] Content deployer client configuration: {
+  "contentDeployerUrl" : "https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com",
+  "uaaClientConfiguration" : {
+    "url" : "********",
+    "useCertificateBasedAuthentication" : "********",
+    "credentials" : "********"
+  },
+  "httpRequestHeaders" : {
+    "X-CorrelationID" : "7346984d-ee3f-11ed-9a43-eeee0a8e3113"
+  }
+}#
+
+#2.0#2023 05 09 07:59:54.736#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.createContentDeployClientConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4729###
+Step "Create Content Deploy Client Configuration" finished#
+
+#2.0#2023 05 09 07:59:54.739#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.getContentFromDeploymentDescriptorTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4729###
+[GetContentFromDeploymentDescriptorStep] Executing task "getContentFromDeploymentDescriptorTask" of process "7aa88c2c-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:54.739#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.getContentFromDeploymentDescriptorTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4729###
+Step "Get Content From Deployment Descriptor" finished#
+
+#2.0#2023 05 09 07:59:54.741#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.uploadContentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4729###
+[UploadContentStep] Executing task "uploadContentTask" of process "7aa88c2c-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:54.741#Z#INFO#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.uploadContentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4729###
+[UploadContentStep] Uploading content module "uicontent" in target service "projectApprovalTools-html5-app-host-service"...#
+
+#2.0#2023 05 09 07:59:54.744#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.uploadContentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4729###
+[UploadContentStep] Uploading file "uicontent/resources/data.zip" for content module "uicontent" in service "projectApprovalTools-html5-app-host-service"#
+
+#2.0#2023 05 09 07:59:54.975#Z#ERROR#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.uploadContentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4729###
+Exception caught#
+
+org.cloudfoundry.multiapps.common.SLException: Error uploading content module "uicontent" in service "projectApprovalTools-html5-app-host-service": org.cloudfoundry.multiapps.controller.persistence.services.FileStorageException: com.sap.cloud.lm.sl.xs2.content.client.ContentDeployerException: Operation 'Upload File' to the URL 'https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com/v2/files/upload' failed. Remote server responded with HTTP status code 500, error message: 'Upload application content failed { CODE: '1001' }', error type 'Bad Request' 
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.processException(SyncFlowableStep.java:131) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.onStepError(SyncFlowableStep.java:126) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.handleException(SyncFlowableStep.java:102) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.executeInternal(SyncFlowableStep.java:81) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.lambda$execute$0(SyncFlowableStep.java:65) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.core.util.LoggingUtil.logWithCorrelationId(LoggingUtil.java:14) ~[multiapps-controller-core-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.execute(SyncFlowableStep.java:65) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.flowable.engine.impl.delegate.invocation.JavaDelegateInvocation.invoke(JavaDelegateInvocation.java:35) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.delegate.invocation.DelegateInvocation.proceed(DelegateInvocation.java:32) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.delegate.invocation.DefaultDelegateInterceptor.handleInvocation(DefaultDelegateInterceptor.java:26) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.bpmn.behavior.ServiceTaskDelegateExpressionActivityBehavior.execute(ServiceTaskDelegateExpressionActivityBehavior.java:157) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.agenda.ContinueProcessOperation.executeActivityBehavior(ContinueProcessOperation.java:313) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.agenda.ContinueProcessOperation.executeSynchronous(ContinueProcessOperation.java:170) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.agenda.ContinueProcessOperation.continueThroughFlowNode(ContinueProcessOperation.java:125) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.agenda.ContinueProcessOperation.run(ContinueProcessOperation.java:88) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.AbstractEngineConfiguration.lambda$new$0(AbstractEngineConfiguration.java:173) ~[flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.executeOperation(CommandInvoker.java:97) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.executeOperations(CommandInvoker.java:81) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:64) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.interceptor.BpmnOverrideContextInterceptor.execute(BpmnOverrideContextInterceptor.java:26) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.interceptor.TransactionContextInterceptor.execute(TransactionContextInterceptor.java:53) ~[flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:83) ~[flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.common.spring.SpringTransactionInterceptor.lambda$execute$0(SpringTransactionInterceptor.java:57) ~[flowable-spring-common-6.6.0.jar:6.6.0]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) [spring-tx-5.3.26.jar:5.3.26]
+	at org.flowable.common.spring.SpringTransactionInterceptor.execute(SpringTransactionInterceptor.java:57) [flowable-spring-common-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:30) [flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:56) [flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:51) [flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.job.service.impl.asyncexecutor.ExecuteAsyncRunnable.executeJob(ExecuteAsyncRunnable.java:127) [flowable-job-service-6.6.0.jar:6.6.0]
+	at org.flowable.job.service.impl.asyncexecutor.ExecuteAsyncRunnable.run(ExecuteAsyncRunnable.java:115) [flowable-job-service-6.6.0.jar:6.6.0]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:?]
+	at java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.cloudfoundry.multiapps.controller.persistence.services.FileStorageException: org.cloudfoundry.multiapps.controller.persistence.services.FileStorageException: com.sap.cloud.lm.sl.xs2.content.client.ContentDeployerException: Operation 'Upload File' to the URL 'https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com/v2/files/upload' failed. Remote server responded with HTTP status code 500, error message: 'Upload application content failed { CODE: '1001' }', error type 'Bad Request'
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processFileContent(ObjectStoreFileStorage.java:111) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.processFileContent(FileService.java:137) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.consumeFileContent(FileService.java:130) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.uploadContent(UploadContentStep.java:78) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.executeStep(UploadContentStep.java:61) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.executeInternal(SyncFlowableStep.java:75) ~[multiapps-controller-process-1.152.2.jar:?]
+	... 29 more
+Caused by: org.cloudfoundry.multiapps.controller.persistence.services.FileStorageException: com.sap.cloud.lm.sl.xs2.content.client.ContentDeployerException: Operation 'Upload File' to the URL 'https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com/v2/files/upload' failed. Remote server responded with HTTP status code 500, error message: 'Upload application content failed { CODE: '1001' }', error type 'Bad Request'
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processContent(ObjectStoreFileStorage.java:126) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processFileContent(ObjectStoreFileStorage.java:109) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.processFileContent(FileService.java:137) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.consumeFileContent(FileService.java:130) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.uploadContent(UploadContentStep.java:78) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.executeStep(UploadContentStep.java:61) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.executeInternal(SyncFlowableStep.java:75) ~[multiapps-controller-process-1.152.2.jar:?]
+	... 29 more
+Caused by: com.sap.cloud.lm.sl.xs2.content.client.ContentDeployerException: Operation 'Upload File' to the URL 'https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com/v2/files/upload' failed. Remote server responded with HTTP status code 500, error message: 'Upload application content failed { CODE: '1001' }', error type 'Bad Request'
+	at com.sap.cloud.lm.sl.xs2.content.client.impl.GACDClientV2Impl.uploadContent(GACDClientV2Impl.java:71) ~[com.sap.cloud.lm.sl.xs2.content-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.upload(UploadContentStep.java:91) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.lambda$uploadContent$0(UploadContentStep.java:83) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.lambda$consumeFileContent$0(FileService.java:131) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processContent(ObjectStoreFileStorage.java:124) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processFileContent(ObjectStoreFileStorage.java:109) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.processFileContent(FileService.java:137) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.consumeFileContent(FileService.java:130) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.uploadContent(UploadContentStep.java:78) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.executeStep(UploadContentStep.java:61) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.executeInternal(SyncFlowableStep.java:75) ~[multiapps-controller-process-1.152.2.jar:?]
+	... 29 more
+Caused by: com.sap.lm.sl.alm.ts.gacd.client.GacClientException: Operation 'Upload File' to the URL 'https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com/v2/files/upload' failed. Remote server responded with HTTP status code 500, error message: 'Upload application content failed { CODE: '1001' }', error type 'Bad Request'
+	at com.sap.lm.sl.alm.ts.gacd.client.RestHelper.handleResponse(RestHelper.java:78) ~[alm-ts-gacd-1.51.2.jar:1.51.2]
+	at com.sap.lm.sl.alm.ts.gacd.client.RestHelper.doMultipartPost(RestHelper.java:183) ~[alm-ts-gacd-1.51.2.jar:1.51.2]
+	at com.sap.lm.sl.alm.ts.gacd.client.v2.GacDeployClientV2.uploadFile(GacDeployClientV2.java:108) ~[alm-ts-gacd-1.51.2.jar:1.51.2]
+	at com.sap.cloud.lm.sl.xs2.content.client.impl.GACDClientV2Impl.uploadContent(GACDClientV2Impl.java:68) ~[com.sap.cloud.lm.sl.xs2.content-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.upload(UploadContentStep.java:91) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.lambda$uploadContent$0(UploadContentStep.java:83) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.lambda$consumeFileContent$0(FileService.java:131) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processContent(ObjectStoreFileStorage.java:124) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processFileContent(ObjectStoreFileStorage.java:109) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.processFileContent(FileService.java:137) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.consumeFileContent(FileService.java:130) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.uploadContent(UploadContentStep.java:78) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.executeStep(UploadContentStep.java:61) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.executeInternal(SyncFlowableStep.java:75) ~[multiapps-controller-process-1.152.2.jar:?]
+	... 29 more
+#2.0#2023 05 09 07:59:54.986#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.uploadContentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4729###
+Step "Upload Content" finished#
+
+#2.0#2023 05 09 07:59:56.672#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildContentDeploymentConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4730###
+[BuildContentDeploymentConfigurationStep] Executing task "buildContentDeploymentConfigurationTask" of process "74534d5e-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:56.767#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildContentDeploymentConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4730###
+[BuildContentDeploymentConfigurationStep] Getting service key "uicontent-projectApprovalTools-html5-app-host-service-credentials" for service instance "projectApprovalTools-html5-app-host-service"...#
+
+#2.0#2023 05 09 07:59:57.061#Z#INFO#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildContentDeploymentConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4730###
+[BuildContentDeploymentConfigurationStep] Service key "uicontent-projectApprovalTools-html5-app-host-service-credentials" for service "projectApprovalTools-html5-app-host-service" already exists#
+
+#2.0#2023 05 09 07:59:57.067#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.buildContentDeploymentConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4730###
+Step "Build Content Deployment Configuration" finished#
+
+#2.0#2023 05 09 07:59:57.071#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.createContentDeployClientConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4730###
+[CreateContentDeployClientConfigurationStep] Executing task "createContentDeployClientConfigurationTask" of process "7d49c40c-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:57.073#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.createContentDeployClientConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4730###
+[CreateContentDeployClientConfigurationStep] Content deployer client configuration: {
+  "contentDeployerUrl" : "https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com",
+  "uaaClientConfiguration" : {
+    "url" : "********",
+    "useCertificateBasedAuthentication" : "********",
+    "credentials" : "********"
+  },
+  "httpRequestHeaders" : {
+    "X-CorrelationID" : "7346984d-ee3f-11ed-9a43-eeee0a8e3113"
+  }
+}#
+
+#2.0#2023 05 09 07:59:57.130#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.createContentDeployClientConfigurationTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4730###
+Step "Create Content Deploy Client Configuration" finished#
+
+#2.0#2023 05 09 07:59:57.133#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.getContentFromDeploymentDescriptorTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4730###
+[GetContentFromDeploymentDescriptorStep] Executing task "getContentFromDeploymentDescriptorTask" of process "7d49c40c-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:57.134#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.getContentFromDeploymentDescriptorTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4730###
+Step "Get Content From Deployment Descriptor" finished#
+
+#2.0#2023 05 09 07:59:57.135#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.uploadContentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4730###
+[UploadContentStep] Executing task "uploadContentTask" of process "7d49c40c-ee3f-11ed-9a43-eeee0a8e3113"...#
+
+#2.0#2023 05 09 07:59:57.136#Z#INFO#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.uploadContentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4730###
+[UploadContentStep] Uploading content module "uicontent" in target service "projectApprovalTools-html5-app-host-service"...#
+
+#2.0#2023 05 09 07:59:57.138#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.uploadContentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4730###
+[UploadContentStep] Uploading file "uicontent/resources/data.zip" for content module "uicontent" in service "projectApprovalTools-html5-app-host-service"#
+
+#2.0#2023 05 09 07:59:57.435#Z#ERROR#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.uploadContentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4730###
+Exception caught#
+
+org.cloudfoundry.multiapps.common.SLException: Error uploading content module "uicontent" in service "projectApprovalTools-html5-app-host-service": org.cloudfoundry.multiapps.controller.persistence.services.FileStorageException: com.sap.cloud.lm.sl.xs2.content.client.ContentDeployerException: Operation 'Upload File' to the URL 'https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com/v2/files/upload' failed. Remote server responded with HTTP status code 500, error message: 'Upload application content failed { CODE: '1001' }', error type 'Bad Request' 
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.processException(SyncFlowableStep.java:131) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.onStepError(SyncFlowableStep.java:126) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.handleException(SyncFlowableStep.java:102) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.executeInternal(SyncFlowableStep.java:81) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.lambda$execute$0(SyncFlowableStep.java:65) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.core.util.LoggingUtil.logWithCorrelationId(LoggingUtil.java:14) ~[multiapps-controller-core-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.execute(SyncFlowableStep.java:65) ~[multiapps-controller-process-1.152.2.jar:?]
+	at org.flowable.engine.impl.delegate.invocation.JavaDelegateInvocation.invoke(JavaDelegateInvocation.java:35) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.delegate.invocation.DelegateInvocation.proceed(DelegateInvocation.java:32) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.delegate.invocation.DefaultDelegateInterceptor.handleInvocation(DefaultDelegateInterceptor.java:26) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.bpmn.behavior.ServiceTaskDelegateExpressionActivityBehavior.execute(ServiceTaskDelegateExpressionActivityBehavior.java:157) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.agenda.ContinueProcessOperation.executeActivityBehavior(ContinueProcessOperation.java:313) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.agenda.ContinueProcessOperation.executeSynchronous(ContinueProcessOperation.java:170) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.agenda.ContinueProcessOperation.continueThroughFlowNode(ContinueProcessOperation.java:125) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.agenda.ContinueProcessOperation.run(ContinueProcessOperation.java:88) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.AbstractEngineConfiguration.lambda$new$0(AbstractEngineConfiguration.java:173) ~[flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.executeOperation(CommandInvoker.java:97) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.executeOperations(CommandInvoker.java:81) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:64) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.engine.impl.interceptor.BpmnOverrideContextInterceptor.execute(BpmnOverrideContextInterceptor.java:26) ~[flowable-engine-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.interceptor.TransactionContextInterceptor.execute(TransactionContextInterceptor.java:53) ~[flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:83) ~[flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.common.spring.SpringTransactionInterceptor.lambda$execute$0(SpringTransactionInterceptor.java:57) ~[flowable-spring-common-6.6.0.jar:6.6.0]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) [spring-tx-5.3.26.jar:5.3.26]
+	at org.flowable.common.spring.SpringTransactionInterceptor.execute(SpringTransactionInterceptor.java:57) [flowable-spring-common-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:30) [flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:56) [flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.common.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:51) [flowable-engine-common-6.6.0.jar:6.6.0]
+	at org.flowable.job.service.impl.asyncexecutor.ExecuteAsyncRunnable.executeJob(ExecuteAsyncRunnable.java:127) [flowable-job-service-6.6.0.jar:6.6.0]
+	at org.flowable.job.service.impl.asyncexecutor.ExecuteAsyncRunnable.run(ExecuteAsyncRunnable.java:115) [flowable-job-service-6.6.0.jar:6.6.0]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:?]
+	at java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.cloudfoundry.multiapps.controller.persistence.services.FileStorageException: org.cloudfoundry.multiapps.controller.persistence.services.FileStorageException: com.sap.cloud.lm.sl.xs2.content.client.ContentDeployerException: Operation 'Upload File' to the URL 'https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com/v2/files/upload' failed. Remote server responded with HTTP status code 500, error message: 'Upload application content failed { CODE: '1001' }', error type 'Bad Request'
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processFileContent(ObjectStoreFileStorage.java:111) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.processFileContent(FileService.java:137) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.consumeFileContent(FileService.java:130) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.uploadContent(UploadContentStep.java:78) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.executeStep(UploadContentStep.java:61) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.executeInternal(SyncFlowableStep.java:75) ~[multiapps-controller-process-1.152.2.jar:?]
+	... 29 more
+Caused by: org.cloudfoundry.multiapps.controller.persistence.services.FileStorageException: com.sap.cloud.lm.sl.xs2.content.client.ContentDeployerException: Operation 'Upload File' to the URL 'https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com/v2/files/upload' failed. Remote server responded with HTTP status code 500, error message: 'Upload application content failed { CODE: '1001' }', error type 'Bad Request'
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processContent(ObjectStoreFileStorage.java:126) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processFileContent(ObjectStoreFileStorage.java:109) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.processFileContent(FileService.java:137) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.consumeFileContent(FileService.java:130) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.uploadContent(UploadContentStep.java:78) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.executeStep(UploadContentStep.java:61) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.executeInternal(SyncFlowableStep.java:75) ~[multiapps-controller-process-1.152.2.jar:?]
+	... 29 more
+Caused by: com.sap.cloud.lm.sl.xs2.content.client.ContentDeployerException: Operation 'Upload File' to the URL 'https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com/v2/files/upload' failed. Remote server responded with HTTP status code 500, error message: 'Upload application content failed { CODE: '1001' }', error type 'Bad Request'
+	at com.sap.cloud.lm.sl.xs2.content.client.impl.GACDClientV2Impl.uploadContent(GACDClientV2Impl.java:71) ~[com.sap.cloud.lm.sl.xs2.content-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.upload(UploadContentStep.java:91) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.lambda$uploadContent$0(UploadContentStep.java:83) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.lambda$consumeFileContent$0(FileService.java:131) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processContent(ObjectStoreFileStorage.java:124) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processFileContent(ObjectStoreFileStorage.java:109) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.processFileContent(FileService.java:137) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.consumeFileContent(FileService.java:130) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.uploadContent(UploadContentStep.java:78) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.executeStep(UploadContentStep.java:61) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.executeInternal(SyncFlowableStep.java:75) ~[multiapps-controller-process-1.152.2.jar:?]
+	... 29 more
+Caused by: com.sap.lm.sl.alm.ts.gacd.client.GacClientException: Operation 'Upload File' to the URL 'https://html5-apps-repo-dt.cfapps.sap.hana.ondemand.com/v2/files/upload' failed. Remote server responded with HTTP status code 500, error message: 'Upload application content failed { CODE: '1001' }', error type 'Bad Request'
+	at com.sap.lm.sl.alm.ts.gacd.client.RestHelper.handleResponse(RestHelper.java:78) ~[alm-ts-gacd-1.51.2.jar:1.51.2]
+	at com.sap.lm.sl.alm.ts.gacd.client.RestHelper.doMultipartPost(RestHelper.java:183) ~[alm-ts-gacd-1.51.2.jar:1.51.2]
+	at com.sap.lm.sl.alm.ts.gacd.client.v2.GacDeployClientV2.uploadFile(GacDeployClientV2.java:108) ~[alm-ts-gacd-1.51.2.jar:1.51.2]
+	at com.sap.cloud.lm.sl.xs2.content.client.impl.GACDClientV2Impl.uploadContent(GACDClientV2Impl.java:68) ~[com.sap.cloud.lm.sl.xs2.content-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.upload(UploadContentStep.java:91) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.lambda$uploadContent$0(UploadContentStep.java:83) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.lambda$consumeFileContent$0(FileService.java:131) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processContent(ObjectStoreFileStorage.java:124) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.ObjectStoreFileStorage.processFileContent(ObjectStoreFileStorage.java:109) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.processFileContent(FileService.java:137) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.persistence.services.FileService.consumeFileContent(FileService.java:130) ~[multiapps-controller-persistence-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.uploadContent(UploadContentStep.java:78) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at com.sap.cloud.lm.sl.xs2.process.steps.UploadContentStep.executeStep(UploadContentStep.java:61) ~[com.sap.cloud.lm.sl.xs2.process-1.152.2.jar:?]
+	at org.cloudfoundry.multiapps.controller.process.steps.SyncFlowableStep.executeInternal(SyncFlowableStep.java:75) ~[multiapps-controller-process-1.152.2.jar:?]
+	... 29 more
+#2.0#2023 05 09 07:59:57.440#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7346984d-ee3f-11ed-9a43-eeee0a8e3113.OPERATION.uploadContentTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-4730###
+Step "Upload Content" finished#
+
