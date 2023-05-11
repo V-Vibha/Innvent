@@ -42,6 +42,11 @@ sap.ui.define(
             },
           ],
         },
+        // atta :
+        //   {  
+        //     selectedAttribute: "Invoiced_Manually", 
+            
+        //    },
         dataLabel: {
           name: "Value Label",
           defaultState: true,
@@ -58,7 +63,7 @@ sap.ui.define(
                   properties: {
                     color: "sapUiChartPaletteSemanticGood",
                   },
-                  displayName: "> 4.0L",
+                  displayName: "< 50",
                 },
                 {
                   dataContext: {
@@ -67,21 +72,21 @@ sap.ui.define(
                   properties: {
                     color: "sapUiChartPaletteSemanticCritical",
                   },
-                  displayName: "2.2L - 4.0L",
+                  displayName: "50 - 250",
                 },
                 {
                   dataContext: { SC_Number_Of_Instances: { min: 250 } },
                   properties: {
                     color: "sapUiChartPaletteSemanticBad",
                   },
-                  displayName: "< 1.8L",
+                  displayName: "> 250",
                 },
               ],
             },
           },
         },
       },
-      oVizFrame: null,
+      oTreeMap: null,
 
       onInit: function (evt) {
         Format.numericFormatter(ChartFormatter.getInstance());
@@ -89,7 +94,65 @@ sap.ui.define(
         var oModel = new JSONModel(this.settingsModel);
         oModel.setDefaultBindingMode(BindingMode.OneWay);
         this.getView().setModel(oModel);
+        var title = this.title = '';
 
+        var attData = [  
+          { 
+            value:"SC_Completed_Phases", 
+            color:"Success" 
+          }, 
+          { 
+            value:"SC_Active_Phases", 
+            color:"Success" 
+          }, 
+          { 
+            value:"item", 
+            color:"Warning" 
+          } ,
+          { 
+            value:"documentType", 
+            color:"Warning" 
+          }, 
+          { 
+            value:"companyCode", 
+            color:"Warning"  
+          }, 
+          { 
+            value:"businessArea", 
+            color:"Warning"  
+           }, 
+          { 
+            value:"vendor", 
+            color:"Warning"  
+          }, 
+        ];
+          var RBModel = new JSONModel(attData);
+          this.CheckBoxList = this.getView().byId("attributeList");
+          this.CheckBoxList.setModel(RBModel);
+
+
+          var oTreeMap = this.oTreeMap = this.getView().byId("myTreeMap");
+        oTreeMap.setVizProperties({
+          plotArea: {
+              dataLabel: {
+                  formatString:formatPattern.SHORTFLOAT_MFD2,
+                  visible: true
+              }
+          },
+          legend: {
+              visible: true,
+              formatString:formatPattern.SHORTFLOAT,
+              title: {
+                  visible: false
+              }
+          },
+          title: {
+              visible: true,
+              formatString:formatPattern.SHORTFLOAT,
+              text: 'Slice and Dice for Critical Processes'
+          }
+      });
+      
         var OdataModel = new sap.ui.model.odata.v2.ODataModel(
           "pv-service/runtime/odata/v1/Accounts_Payable",
           {
@@ -98,21 +161,21 @@ sap.ui.define(
             defaultCountMode: sap.ui.model.odata.CountMode.None,
           }
         );
-        var oFilterQ1 = new sap.ui.model.Filter(
+        var oFilterQ1=this.oFilterQ1 = new sap.ui.model.Filter(
           "SC_Status",
           sap.ui.model.FilterOperator.EQ,
           "Critical"
         );
 
-        
-        var oTreeMap = this.getView().byId("myTreeMap");
-
-        /////////////////////////////////////////////////////////////////
-        //tree
-        var treeDataset = new sap.viz.ui5.data.FlattenedDataset({
+        // this.title =sap.ui.getCore().byId("__button0-"+this.CheckBoxList.sId+"-0").getText();
+        this.updateTreeMap(this.title);
+        oTreeMap.setModel(OdataModel);
+      },
+      updateTreeMap: function (attributeName) {
+        this.treeDataset = new sap.viz.ui5.data.FlattenedDataset({
           dimensions: [
-            { axis: 1, name: "SC_Status", value: "{SC_Status}" },
-            { axis: 1, name: "businessArea", value: "{businessArea}" },
+            { axis: 1, name: "SC_Status", value: "Critical" },
+            { axis: 1, name: "Selected_Attribute", value: '{'+ attributeName +'}'},
           ],
           measures: [
             {
@@ -123,113 +186,39 @@ sap.ui.define(
           ],
           data: {
             path: "/Instances",
-            filters: [oFilterQ1],
+            filters: [this.oFilterQ1],
             parameters:
             {
-                select: "SC_Number_Of_Instances,businessArea" 
+                select: "SC_Number_Of_Instances," + attributeName
             }
           },
         });
-        
-        oTreeMap.setDataset(treeDataset);
-        console.log(treeDataset);
-        oTreeMap.setModel(OdataModel);
-
-        var attData = [  
-          {  value:"Invoiced Manually", 
-           selected:false, 
-           color:"green" 
-           }, 
-          { 
-             value:"Late Payment", 
-              selected:false ,
-              color:"green" 
-          }, 
-          { 
-             value:"Completed Phases", 
-             selected:false ,
-             color:"green" 
-          }, 
-          { 
-             value:"Active Phases", 
-              selected:false 
-          }, 
-          { 
-             value:"Critical Vendor", 
-              selected:false 
-          }, 
-           { 
-             value:"Item", 
-              selected:false 
-          } ,
-          { 
-               value:"Document Type", 
-                selected:false, 
-                color:"green" 
-          }, 
-          { 
-                   value:"Early Payment", 
-                    selected:false 
-           }, 
-          { 
-             value:"Company Code", 
-              selected:false 
-           }, 
-          { 
-              value:"Business Area", 
-              selected:true 
-            
-            }, 
-             { 
-               value:"Vendor", 
-                selected:false 
-               }, 
-                { 
-                   value:"Invoice Value", 
-                    selected:false 
-                   }];
-        
-           var RBModel = new JSONModel(attData);
-           var CheckBoxList = this.getView().byId("attributeList");
-           CheckBoxList.setModel(RBModel);
-
-          //  var firstItem = this.getView().byId("attributeList").getItems()[0]; 
-          //  this.getView().byId("attributeList").setSelectedItem(firstItem,true); 
-
+        this.oTreeMap.setDataset(this.treeDataset);
       },
       handleSelectChange: function (oEvent) {
-        var title =oEvent.getSource().getText();
-        sap.m.MessageToast.show(oEvent.getSource().getText());
+        // if(this.title !== oEvent.getSource().getSelectedItem().getText()){
+        this.title = oEvent.getSource().getText();
+        this.oTreeMap.setVizProperties({
+          title : { text: "Slice and Dice for Critical Processes and "+this.title }});
+          this.updateTreeMap(this.title);
+        // }
       },
-
       onAfterRendering: function () {
-        // var list = new sap.m.List({
-        //   id : "attributeList" ,
-        //   updateFinished : function(oEvent){ 
-        //        var firstItem = this.getView().byId("attributeList").getItems()[0]; 
-        //        this.getView().byId("attributeList").setSelectedItem(firstItem,true); 
-        //        // perform further neede code here..like modfieng detail page based upon first item
-        //        }
-        //   });
-          
-        //   var firstItem = this.getView().byId("attributeList").getItems()[0]; 
-        //   this.getView().byId("attributeList").setSelectedItem(firstItem,true); 
-
-        // this.datasetRadioGroup = this.getView().byId("attributeList");
-        // this.datasetRadioGroup.setSelectedIndex(
-        //   this.settingsModel.dataset.defaultSelected
-        // );
+          var firstItem ="__button0-"+this.CheckBoxList.sId+"-0"
+          sap.ui.getCore().byId(firstItem).setSelected(true); 
+          sap.ui.getCore().byId(firstItem).fireSelect();
+          this.title =sap.ui.getCore().byId(firstItem).getText();
       },
       onDatasetSelected: function (oEvent) {
         var datasetRadio = oEvent.getSource();
-        if (this.oVizFrame && datasetRadio.getSelected()) {
+        if (this.oTreeMap && datasetRadio.getSelected()) {
           var bindValue = datasetRadio.getBindingContext().getObject();
-          this.oVizFrame.setModel(dataModel);
+          this.oTreeMap.setModel(dataModel);
         }
       },
       onDataLabelChanged: function (oEvent) {
-        if (this.oVizFrame) {
-          this.oVizFrame.setVizProperties({
+        if (this.oTreeMap) {
+          this.oTreeMap.setVizProperties({
             plotArea: {
               dataLabel: {
                 visible: oEvent.getParameter("state"),
@@ -239,11 +228,9 @@ sap.ui.define(
         }
       },
       onSemanticColorChanged: function (oEvent) {
-        this._initializeSectionData();
-        if (this.oVizFrame) {
-          var oVizProperties = this.oVizFrame.getVizProperties();
-          console.log(oVizProperties); // eslint-disable-line no-console
-          this.oVizFrame.setVizProperties({
+        if (this.oTreeMap) {
+          var oVizProperties = this.oTreeMap.getVizProperties();
+          this.oTreeMap.setVizProperties({
             plotArea: {
               dataPointStyle:
                 this.settingsModel.semanticColor.values[
@@ -251,9 +238,10 @@ sap.ui.define(
                 ],
             },
           });
-          window.test = this.oVizFrame.getVizProperties();
+          window.test = this.oTreeMap.getVizProperties();
         }
-      },
+      }
+      
     });
   }
 );
