@@ -1,5 +1,6 @@
 <mvc:View controllerName="com.sap.bpm.pv.innvent.ui.controller.MyView" 
     xmlns="sap.m"
+    xmlns:core="sap.ui.core"
     xmlns:viz="sap.viz.ui5.controls" 
     xmlns:layout="sap.ui.layout" displayBlock="true"
     xmlns:mvc="sap.ui.core.mvc" 
@@ -13,19 +14,10 @@
         <layout:fixContent>
             <Panel id='settingsPanel' class="panelStyle" expandable="true" expanded="false" headerText="Settings" width="auto">
                 <content>
-                    <HBox id="_IDGenHBox1" class='settingsHBox'>
-                    <!-- <VBox id="_IDGenVBox1" class='settingsBox'>
-                        <Label id="_IDGenLabel1" text="{/dataset/name}" design="Bold" class='settingsLabel'></Label>
-                        <RadioButtonGroup id='datasetRadioGroup'
-                                buttons="{path: '/dataset/values'}">
-                            <buttons>
-                                <RadioButton id="_IDGenRadioButton1" class='settingsRadio' text="{name}" select="onDatasetSelected"/>
-                            </buttons>
-                        </RadioButtonGroup>
-                    </VBox> -->
-                    <VBox id="_IDGenVBox2" class='settingsBox'>
-                        <Label id="_IDGenLabel2" text = '{/dataLabel/name}' design="Bold" class='settingsLabel sapUiTinyMargin'></Label>
-                        <Switch id="_IDGenSwitch1" class='settingsSwitch' state="{/dataLabel/defaultState}" change='onDataLabelChanged'>
+                    <HBox class='settingsHBox'>
+                    <VBox class='settingsBox'>
+                        <Label text = '{/dataLabel/name}' design="Bold" class='settingsLabel sapUiTinyMargin'></Label>
+                        <Switch  class='settingsSwitch' state="{/dataLabel/defaultState}" change='onDataLabelChanged'>
                             <layoutData>
                                 <FlexItemData id="_IDGenFlexItemData1" growFactor="1" />
                             </layoutData>
@@ -44,32 +36,31 @@
                 <viz:Popover id="idPopOver"></viz:Popover>
             </Panel>
          </layout:fixContent>
-       <!-- </layout:FixFlex> selected="{selected}"--> 
        <layout:flexContent>
-       <HBox height="100%" width="100%">
-            <List id ="attributeList" items="{/}"  width="250px" headerText="Status" >
-                <items >
-                    <CustomListItem id="_IDGenStandardListItem1" >
-                        <RadioButton id="_IDGenCheckBox11" text="{value}" selected="{selected}" select="handleSelectChange"/>
-                    </CustomListItem >
+       <HBox id="hii" height="100%" width="100%">
+            <List id ="attributeList" items="{/}" height="100%" width="250px">
+                <items>
+                    <CustomListItem>
+                        <RadioButton text="{value}" select="handleSelectChange"/>
+                    </CustomListItem>
                 </items>
+                
                 <infoToolbar >
-                    <OverflowToolbar id="_IDGenOverflowToolbar1" width="250px" >
-                        <Label id ="l1" text="Recommended Attributes" />
+                    <OverflowToolbar id="_IDGenOverflowToolbar1" width="250px" height="50px">
+                        <Title level="H1" class="sapUiSmallMargin" text=" Attributes" />
                     </OverflowToolbar>
                 </infoToolbar>
             </List>
-        
-            <viz:VizFrame vizType="treemap" id="myTreeMap" width="1010px">
-                <viz:feeds>
-                    <viz.feeds:FeedItem id="_IDGenFeedItem1" uid="color" type="Measure"
+            <viz:VizFrame vizType="treemap" id="myTreeMap" width="1010px" height="100%">
+                <viz:feeds id="vizfeed">
+                    <viz.feeds:FeedItem uid="color" type="Measure"
                         values="SC_Number_Of_Instances" />
-                    <viz.feeds:FeedItem id="_IDGenFeedItem2" uid="weight" type="Measure"
+                    <viz.feeds:FeedItem uid="weight" type="Measure"
                         values="SC_Number_Of_Instances" />                     
-                    <viz.feeds:FeedItem id="_IDGenFeedItem3" uid="title" type="Dimension"
+                    <viz.feeds:FeedItem uid="title" type="Dimension"
                         values="SC_Status" />    
-                    <viz.feeds:FeedItem id="_IDGenFeedItem4" uid="title" type="Dimension"
-                        values="businessArea" />
+                    <viz.feeds:FeedItem uid="title" type="Dimension"
+                    values="Selected_Attribute" />
                 </viz:feeds>
             </viz:VizFrame>
           </HBox>  
