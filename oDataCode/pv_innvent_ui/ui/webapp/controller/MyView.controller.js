@@ -42,11 +42,7 @@ sap.ui.define(
             },
           ],
         },
-        // atta :
-        //   {  
-        //     selectedAttribute: "Invoiced_Manually", 
-            
-        //    },
+        
         dataLabel: {
           name: "Value Label",
           defaultState: true,
@@ -95,37 +91,71 @@ sap.ui.define(
         oModel.setDefaultBindingMode(BindingMode.OneWay);
         this.getView().setModel(oModel);
         var title = this.title = '';
-
+        var url = "python_app/";
         var attData = [  
           { 
+            name:"Completed Phase",
             value:"SC_Completed_Phases", 
             color:"Success" 
           }, 
-          { 
+          { name:"Active Phase", 
             value:"SC_Active_Phases", 
             color:"Success" 
           }, 
           { 
+            name: "Item",
             value:"item", 
             color:"Warning" 
           } ,
-          { 
+          { name:"Document Type",  
             value:"documentType", 
             color:"Warning" 
           }, 
           { 
+            name: "Company Code",
             value:"companyCode", 
             color:"Warning"  
           }, 
           { 
+            
+            name:"Business Area", 
             value:"businessArea", 
             color:"Warning"  
            }, 
           { 
+            name: "Vendor",
             value:"vendor", 
             color:"Warning"  
           }, 
         ];
+        var attData1 = [];
+        //  jQuery.sap.delayedCall(3000, this, function() {
+        jQuery.ajax({
+          url: url,
+          
+          success: function(data) {
+              
+              console.log('Response from Python app' + data);
+              
+                    }
+          ,
+        error: function(err)
+      {
+         console.log('error' + err);
+      }})
+          //  });
+          //  var metadata = myControl.getModel().getMetaModel(); // Assuming myControl is the UI control you're working with
+          //  var entityType = metadata.getODataEntityType("xmlns:sap='http://www.sap.com/Protocols/SAPData' Name='InstanceType' sap:semantics='aggregate'"); // Replace "EntityTypeName" with the actual entity type name
+           
+          //  if (entityType) {
+          //    var propertyMetadata = entityType.getProperty("PropertyName"); // Replace "PropertyName" with the actual property name
+          //    if (propertyMetadata) {
+          //      var label = propertyMetadata["sap:label"];
+          //      console.log("Label:", label);
+          //    }
+          //  }
+           
+       
           var RBModel = new JSONModel(attData);
           this.CheckBoxList = this.getView().byId("attributeList");
           this.CheckBoxList.setModel(RBModel);
@@ -149,12 +179,12 @@ sap.ui.define(
           title: {
               visible: true,
               formatString:formatPattern.SHORTFLOAT,
-              text: 'Slice and Dice for Critical Processes'
+              text: 'Instances by'
           }
       });
       
         var OdataModel = new sap.ui.model.odata.v2.ODataModel(
-          "pv-service/runtime/odata/v1/Accounts_Payable",
+          "pv-service/runtime/odata/v1/Accounts_Payable",  
           {
             json: true,
             useBatch: false,
@@ -167,14 +197,30 @@ sap.ui.define(
           "Critical"
         );
 
-        // this.title =sap.ui.getCore().byId("__button0-"+this.CheckBoxList.sId+"-0").getText();
         this.updateTreeMap(this.title);
+        OdataModel.metadataLoaded().then(function() {
+          var oMetadata = OdataModel.getServiceMetadata();
+          var entityName = "/Instances"; // Replace with the entity name you want to retrieve data from
+        
+          var oEntityMetadata = oMetadata.dataServices.schema[0][0].entityType.find(function(entity) {
+            return entity.name === entityName;
+          });
+          console.log(oEntityMetadata);
+          if (oEntityMetadata) {
+            oEntityMetadata.property.forEach(function(property) {
+              var propertyName = property.name;
+              var propertyLabel = property["sap:label"];
+        
+              console.log("Property Name: " + propertyName);
+              console.log("Property Label: " + propertyLabel);
+            });}});
         oTreeMap.setModel(OdataModel);
       },
       updateTreeMap: function (attributeName) {
+        console.log("attributeName= " + attributeName)
         this.treeDataset = new sap.viz.ui5.data.FlattenedDataset({
           dimensions: [
-            { axis: 1, name: "SC_Status", value: "Critical" },
+            { axis: 1, name: "Status", value: "Critical" },
             { axis: 1, name: "Selected_Attribute", value: '{'+ attributeName +'}'},
           ],
           measures: [
@@ -196,12 +242,12 @@ sap.ui.define(
         this.oTreeMap.setDataset(this.treeDataset);
       },
       handleSelectChange: function (oEvent) {
-        // if(this.title !== oEvent.getSource().getSelectedItem().getText()){
+          var datasetRadio = oEvent.getSource();
+          var bindValue = datasetRadio.getBindingContext().getObject();
         this.title = oEvent.getSource().getText();
         this.oTreeMap.setVizProperties({
-          title : { text: "Slice and Dice for Critical Processes and "+this.title }});
-          this.updateTreeMap(this.title);
-        // }
+          title : { text: "Instances by "+this.title }});
+          this.updateTreeMap(bindValue.value);
       },
       onAfterRendering: function () {
           var firstItem ="__button0-"+this.CheckBoxList.sId+"-0"
