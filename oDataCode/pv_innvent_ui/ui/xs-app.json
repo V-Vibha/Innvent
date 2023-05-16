@@ -1,27 +1,30 @@
 {
-	"welcomeFile": "/index.html",
-	"authenticationMethod": "route",
-	"logout": {
-		"logoutEndpoint": "/do/logout"
-	},
-	"routes": [
-		{
-			"source": "^/pv-service/runtime/odata/internal/(.*)",
-			"target": "/internal/visibility/runtime/odata/$1",
-			"service": "com.sap.spa.processautomation",
-			"endpoint": "api"
-		},
-		{
-			"source": "^/pv-service/runtime/odata/(.*)",
-			"target": "/public/visibility/runtime/odata/$1",
-			"service": "com.sap.spa.processautomation",
-			"endpoint": "api"
-		},
-		{
-			"source": "^(/.*)$",
-			"target": "$1",
-			"service": "html5-apps-repo-rt",
-			"authenticationType": "xsuaa"
-		}
-	]
+  "welcomeFile": "/index.html",
+  "authenticationMethod": "route",
+  "logout": { "logoutEndpoint": "/do/logout" },
+  "routes": [
+    {
+      "source": "^/pv-service/runtime/odata/internal/(.*)",
+      "target": "/internal/visibility/runtime/odata/$1",
+      "service": "com.sap.spa.processautomation",
+      "endpoint": "api"
+    },
+    {
+      "source": "^/pv-service/runtime/odata/(.*)",
+      "target": "/public/visibility/runtime/odata/$1",
+      "service": "com.sap.spa.processautomation",
+      "endpoint": "api"
+    },
+    {
+      "source": "^/python_app/(.*)",
+      "target": "/$1",
+      "destination": "innvent_python_app"
+    },
+    {
+      "source": "^(/.*)$",
+      "target": "$1",
+      "service": "html5-apps-repo-rt",
+      "authenticationType": "xsuaa"
+    }
+  ]
 }
