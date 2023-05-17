@@ -1,5 +1,6 @@
 <mvc:View controllerName="com.sap.bpm.pv.innvent.ui.controller.MyView" 
     xmlns="sap.m"
+    xmlns:s="sap.m.Sticky"
     xmlns:core="sap.ui.core"
     xmlns:viz="sap.viz.ui5.controls" 
     xmlns:layout="sap.ui.layout" displayBlock="true"
@@ -7,15 +8,15 @@
     xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
     xmlns:viz.data="sap.viz.ui5.data" height="100%">
 
-    <Page id="page" title="{i18n>title}">
+    <Page id="page" >
              
-<layout:FixFlex id='chartFixFlex' minFlexSize="250">
-        <!--Below is the setting panel -->
-        <layout:fixContent>
-            <Panel id='settingsPanel' class="panelStyle" expandable="true" expanded="false" headerText="Settings" width="auto">
+<layout:FixFlex id='chartFixFlex'>
+        <!--Below is the setting panel  title="{i18n>title}"-->
+        <!-- <layout:fixContent> -->
+            <!-- <Panel id='settingsPanel' class="panelStyle" expandable="true" expanded="false" headerText="Settings" width="auto">
                 <content>
                     <HBox class='settingsHBox'>
-                    <VBox class='settingsBox'>
+                    <VBox class='settingsBox'> minFlexSize="250"
                         <Label text = '{/dataLabel/name}' design="Bold" class='settingsLabel sapUiTinyMargin'></Label>
                         <Switch  class='settingsSwitch' state="{/dataLabel/defaultState}" change='onDataLabelChanged'>
                             <layoutData>
@@ -34,33 +35,38 @@
                     </HBox>
                 </content>
                 <viz:Popover id="idPopOver"></viz:Popover>
-            </Panel>
-         </layout:fixContent>
+            </Panel> -->
+         <!-- </layout:fixContent> -->
        <layout:flexContent>
-       <HBox id="hii" height="100%" width="100%">
-            <List id ="attributeList" items="{/}" height="100%" width="250px">
+       <HBox height="100%" width="100%">
+       <!-- items="{/value}" -->
+       <VBox height="100%"> 
+            <!-- <s:InfoToolbar > -->
+                    <OverflowToolbar id="_IDGenOverflowToolbar1" width="300px" height="50px">
+                        <Title level="H1" class="sapUiSmallMargin" text=" Slice and Dice by" />
+                    </OverflowToolbar>
+            <!-- </s:InfoToolbar> -->
+            <List id ="attributeList" items="{/}" class="sapUiLargeMargin" height="100%" width="300px">
                 <items>
                     <CustomListItem>
-                        <RadioButton text="{value}" select="handleSelectChange"/>
+                        <RadioButton text="{label}" select="handleSelectChange">
+                        <customData>
+                            <core:CustomData key="keyy" value="{key}"/>
+                        </customData></RadioButton>
                     </CustomListItem>
                 </items>
-                
-                <infoToolbar >
-                    <OverflowToolbar id="_IDGenOverflowToolbar1" width="250px" height="50px">
-                        <Title level="H1" class="sapUiSmallMargin" text=" Attributes" />
-                    </OverflowToolbar>
-                </infoToolbar>
             </List>
+        </VBox>
             <viz:VizFrame vizType="treemap" id="myTreeMap" width="1010px" height="100%">
                 <viz:feeds id="vizfeed">
                     <viz.feeds:FeedItem uid="color" type="Measure"
-                        values="SC_Number_Of_Instances" />
+                        values="Number Of Instances" />
                     <viz.feeds:FeedItem uid="weight" type="Measure"
-                        values="SC_Number_Of_Instances" />                     
+                        values="Number Of Instances" />                     
                     <viz.feeds:FeedItem uid="title" type="Dimension"
-                        values="SC_Status" />    
-                    <viz.feeds:FeedItem uid="title" type="Dimension"
-                    values="Selected_Attribute" />
+                        values="Status" />    
+                    <viz.feeds:FeedItem id="IDGenFeedItem4" uid="title" type="Dimension"
+                    values="Selected Attribute" />
                 </viz:feeds>
             </viz:VizFrame>
           </HBox>  

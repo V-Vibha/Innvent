@@ -42,7 +42,11 @@ sap.ui.define(
             },
           ],
         },
-        
+        // atta :
+        //   {  
+        //     selectedAttribute: "Invoiced_Manually", 
+            
+        //    },
         dataLabel: {
           name: "Value Label",
           defaultState: true,
@@ -55,7 +59,7 @@ sap.ui.define(
             true: {
               rules: [
                 {
-                  dataContext: { SC_Number_Of_Instances: { max: 50 } },
+                  dataContext: { "{Number Of Instances}": { max: 50 } },
                   properties: {
                     color: "sapUiChartPaletteSemanticGood",
                   },
@@ -91,103 +95,39 @@ sap.ui.define(
         oModel.setDefaultBindingMode(BindingMode.OneWay);
         this.getView().setModel(oModel);
         var title = this.title = '';
+        this.vizfeed1 = this.getView().byId("IDGenFeedItem4");
+
+        var pyData = this.pyData=[];
         var url = "python_app/";
-        var attData = [  
-          { 
-            name:"Completed Phase",
-            value:"SC_Completed_Phases", 
-            color:"Success" 
-          }, 
-          { name:"Active Phase", 
-            value:"SC_Active_Phases", 
-            color:"Success" 
-          }, 
-          { 
-            name: "Item",
-            value:"item", 
-            color:"Warning" 
-          } ,
-          { name:"Document Type",  
-            value:"documentType", 
-            color:"Warning" 
-          }, 
-          { 
-            name: "Company Code",
-            value:"companyCode", 
-            color:"Warning"  
-          }, 
-          { 
-            
-            name:"Business Area", 
-            value:"businessArea", 
-            color:"Warning"  
-           }, 
-          { 
-            name: "Vendor",
-            value:"vendor", 
-            color:"Warning"  
-          }, 
-        ];
-        var attData1 = [];
-        //  jQuery.sap.delayedCall(3000, this, function() {
-        jQuery.ajax({
-          url: url,
-          
-          success: function(data) {
-              
-              console.log('Response from Python app' + data);
-              
-                    }
-          ,
-        error: function(err)
-      {
-         console.log('error' + err);
-      }})
-          //  });
-          //  var metadata = myControl.getModel().getMetaModel(); // Assuming myControl is the UI control you're working with
-          //  var entityType = metadata.getODataEntityType("xmlns:sap='http://www.sap.com/Protocols/SAPData' Name='InstanceType' sap:semantics='aggregate'"); // Replace "EntityTypeName" with the actual entity type name
-           
-          //  if (entityType) {
-          //    var propertyMetadata = entityType.getProperty("PropertyName"); // Replace "PropertyName" with the actual property name
-          //    if (propertyMetadata) {
-          //      var label = propertyMetadata["sap:label"];
-          //      console.log("Label:", label);
-          //    }
-          //  }
-           
-       
-          var RBModel = new JSONModel(attData);
+        jQuery.ajax({ 
+          url: url, 
+          success: function(data) { 
+            pyData = data;
+            // console.log('Response from Python app' + data);
+            data.forEach(element => {
+              console.log(' ' + element);
+            });
+            data.forEach(function(item) {
+               console.log(item);
+            });
+          } , 
+          error: function(err) { 
+            console.log('error' + err); 
+          }});
+          jQuery.sap.delayedCall(3000, this, function() { 
+          var RBModel= this.RBModel = new JSONModel(pyData);
           this.CheckBoxList = this.getView().byId("attributeList");
-          this.CheckBoxList.setModel(RBModel);
+          this.CheckBoxList.setModel(RBModel); 
+          
+          });
+          
 
-
-          var oTreeMap = this.oTreeMap = this.getView().byId("myTreeMap");
-        oTreeMap.setVizProperties({
-          plotArea: {
-              dataLabel: {
-                  formatString:formatPattern.SHORTFLOAT_MFD2,
-                  visible: true
-              }
-          },
-          legend: {
-              visible: true,
-              formatString:formatPattern.SHORTFLOAT,
-              title: {
-                  visible: false
-              }
-          },
-          title: {
-              visible: true,
-              formatString:formatPattern.SHORTFLOAT,
-              text: 'Instances by'
-          }
-      });
-      
         var OdataModel = new sap.ui.model.odata.v2.ODataModel(
-          "pv-service/runtime/odata/v1/Accounts_Payable",  
+          "pv-service/runtime/odata/v1/Accounts_Payable",
           {
             json: true,
             useBatch: false,
+            loadMetadataAsync : false,
             defaultCountMode: sap.ui.model.odata.CountMode.None,
           }
         );
@@ -197,36 +137,115 @@ sap.ui.define(
           "Critical"
         );
 
-        this.updateTreeMap(this.title);
-        OdataModel.metadataLoaded().then(function() {
-          var oMetadata = OdataModel.getServiceMetadata();
-          var entityName = "/Instances"; // Replace with the entity name you want to retrieve data from
+        // var attData = [
+        //   { 
+        //     "label":"Completed Phases",
+        //     "key":"SC_Completed_Phases"
+        //   },
+        //   { 
+        //     "label":"Active Phases",
+        //     "key":"SC_Active_Phases"
+        //   },
+        //   { 
+        //     "label":"Item",
+        //     "key":"item"
+        //   },
+        //   { 
+        //     "label":"Document Type",
+        //     "key":"documentType"
+        //   },
+        //   { 
+        //     "label":"Company Code",
+        //     "key":"companyCode"
+        //   },
+        //   { 
+        //     "label":"Business Area",
+        //     "key":"businessArea"
+        //   },
+        //   { 
+        //     "label":"Vendor",
+        //     "key":"vendor"
+        //   }
+        // ];
+
+          // var RBModel= this.RBModel = new JSONModel(attData);
+          // this.CheckBoxList = this.getView().byId("attributeList");
+          // this.CheckBoxList.setModel(RBModel);
+          
+// ========================================================
+// console.log(OdataModel);
+//         var RBModel2;
+//         var CheckBoxList2= this.CheckBoxList2= this.getView().byId("attributeList2");
+//         OdataModel.attachRequestCompleted(function() {
+//           var aD = this.getMetaModel().oMetadata.mEntityTypes["com.sap.pvs.InstanceType"].property
+//           var attData = { 
+//             "value": [  "SC_Completed_Phases",
+//                         "SC_Active_Phases",
+//                         "item",
+//                         "documentType",
+//                         "companyCode",
+//                         "businessArea",
+//                         "vendor"
+//                       ]
+//                     };
+//           var RBModel= this.RBModel = new JSONModel(attData);
+//           var keys=[];
+//           for (var j = 0; j < 7; j++ ) {
+//             for(var i = 0; i < aD.length; i++) {
+//               if(attData.value[j] === aD[i].name){
+//                 console.log(aD[i].extensions[1].value);
+
+//                 keys.push(aD[i].extensions[1].value);
+//                 // console.loxg(keys);
+//               }
+//             }
+//             // var obj = aD[i];
+//             // console.log(aD[i].extensions[1].value);
+//          }
+//         //  RBModel.setdata("keys",keys);
+//          console.log(keys);
+//          console.log(RBModel);
         
-          var oEntityMetadata = oMetadata.dataServices.schema[0][0].entityType.find(function(entity) {
-            return entity.name === entityName;
-          });
-          console.log(oEntityMetadata);
-          if (oEntityMetadata) {
-            oEntityMetadata.property.forEach(function(property) {
-              var propertyName = property.name;
-              var propertyLabel = property["sap:label"];
-        
-              console.log("Property Name: " + propertyName);
-              console.log("Property Label: " + propertyLabel);
-            });}});
+//           RBModel2 = new JSONModel(aD);
+//           CheckBoxList2.setModel(RBModel2);
+//         });
+// ========================================================
+
+      var oTreeMap = this.oTreeMap = this.getView().byId("myTreeMap");
+      oTreeMap.setVizProperties({
+        plotArea: {
+          dataLabel: {
+            formatString:formatPattern.SHORTFLOAT_MFD2,
+            visible: true
+          }
+        },
+        legend: {
+          visible: true,
+          formatString:formatPattern.SHORTFLOAT,
+          title: {
+            visible: false
+          }
+        },
+        title: {
+          visible: true,
+          formatString:formatPattern.SHORTFLOAT,
+          text: 'Instances by'
+        }
+      });
+
+        // this.updateTreeMap(this.title);
         oTreeMap.setModel(OdataModel);
       },
       updateTreeMap: function (attributeName) {
-        console.log("attributeName= " + attributeName)
         this.treeDataset = new sap.viz.ui5.data.FlattenedDataset({
           dimensions: [
             { axis: 1, name: "Status", value: "Critical" },
-            { axis: 1, name: "Selected_Attribute", value: '{'+ attributeName +'}'},
+            { axis: 1, name: "Selected Attribute", value: '{'+ attributeName +'}'},
           ],
           measures: [
             {
               group: 1,
-              name: "SC_Number_Of_Instances",
+              name: "Number Of Instances",
               value: "{SC_Number_Of_Instances}",
             },
           ],
@@ -240,14 +259,15 @@ sap.ui.define(
           },
         });
         this.oTreeMap.setDataset(this.treeDataset);
+        
       },
       handleSelectChange: function (oEvent) {
-          var datasetRadio = oEvent.getSource();
-          var bindValue = datasetRadio.getBindingContext().getObject();
-        this.title = oEvent.getSource().getText();
+        // if(this.title !== oEvent.getSource().getSelectedItem().getText()){
+        this.title = oEvent.getSource().getCustomData()[0].getValue();
         this.oTreeMap.setVizProperties({
-          title : { text: "Instances by "+this.title }});
-          this.updateTreeMap(bindValue.value);
+          title : { text: "Instances by "+oEvent.getSource().getText() }});
+          this.updateTreeMap(this.title);
+        // }
       },
       onAfterRendering: function () {
           var firstItem ="__button0-"+this.CheckBoxList.sId+"-0"

@@ -6,12 +6,12 @@ sap.ui.define([
     return {
         initPageSettings : function(oView) {
             // Hide Settings Panel for phone
-            if (Device.system.phone) {
-                var oSettingsPanel = oView.byId('settingsPanel');
-                if (oSettingsPanel){
-                    oSettingsPanel.setExpanded(false);
-                }
-            }
+            // if (Device.system.phone) {
+            //     var oSettingsPanel = oView.byId('settingsPanel');
+            //     if (oSettingsPanel){
+            //         oSettingsPanel.setExpanded(false);
+            //     }
+            // }
 
             // try to load sap.suite.ui.commons for using ChartContainer
             // sap.suite.ui.commons is available in sapui5-sdk-dist but not in demokit
