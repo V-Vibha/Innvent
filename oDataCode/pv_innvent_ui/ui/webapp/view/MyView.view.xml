@@ -8,56 +8,31 @@
     xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
     xmlns:viz.data="sap.viz.ui5.data" height="100%">
 
-    <Page id="page" >
-             
-<layout:FixFlex id='chartFixFlex'>
-        <!--Below is the setting panel  title="{i18n>title}"-->
-        <!-- <layout:fixContent> -->
-            <!-- <Panel id='settingsPanel' class="panelStyle" expandable="true" expanded="false" headerText="Settings" width="auto">
-                <content>
-                    <HBox class='settingsHBox'>
-                    <VBox class='settingsBox'> minFlexSize="250"
-                        <Label text = '{/dataLabel/name}' design="Bold" class='settingsLabel sapUiTinyMargin'></Label>
-                        <Switch  class='settingsSwitch' state="{/dataLabel/defaultState}" change='onDataLabelChanged'>
-                            <layoutData>
-                                <FlexItemData id="_IDGenFlexItemData1" growFactor="1" />
-                            </layoutData>
-                        </Switch>
-                    </VBox>
-                    <VBox id="_IDGenVBox3" class='settingsBox'>
-                        <Label id="_IDGenLabel3" text = '{/semanticColor/name}' design="Bold" class='settingsLabel sapUiTinyMargin'></Label>
-                        <Switch id='semanticColorSwitch' class='settingsSwitch' state="{/semanticColor/defaultState}" change='onSemanticColorChanged'>
-                            <layoutData>
-                                <FlexItemData id="_IDGenFlexItemData2" growFactor="1" />
-                            </layoutData>
-                        </Switch>
-                    </VBox>
-                    </HBox>
-                </content>
-                <viz:Popover id="idPopOver"></viz:Popover>
-            </Panel> -->
-         <!-- </layout:fixContent> -->
+<Page id="page" >
+    <layout:FixFlex id='chartFixFlex'>
        <layout:flexContent>
        <HBox height="100%" width="100%">
-       <!-- items="{/value}" -->
-       <VBox height="100%"> 
-            <!-- <s:InfoToolbar > -->
-                    <OverflowToolbar id="_IDGenOverflowToolbar1" width="300px" height="50px">
-                        <Title level="H1" class="sapUiSmallMargin" text=" Slice and Dice by" />
+            <VBox height="100%"> 
+                <!-- <s:InfoToolbar > -->
+                    <OverflowToolbar id="_IDGenOverflowToolbar1" class="sapUiMediumMarginBegin sapUiSmallMarginEnd" width="300px" height="50px">
+                        <Title level="H3" text="Slice and Dice by" />
                     </OverflowToolbar>
-            <!-- </s:InfoToolbar> -->
-            <List id ="attributeList" items="{/}" class="sapUiLargeMargin" height="100%" width="300px">
-                <items>
-                    <CustomListItem>
-                        <RadioButton text="{label}" select="handleSelectChange">
-                        <customData>
-                            <core:CustomData key="keyy" value="{key}"/>
-                        </customData></RadioButton>
-                    </CustomListItem>
-                </items>
-            </List>
-        </VBox>
-            <viz:VizFrame vizType="treemap" id="myTreeMap" width="1010px" height="100%">
+                <!-- </s:InfoToolbar> width="1010px"-->
+                <List id ="attributeList" items="{/}" class="sapUiMediumMarginBegin sapUiSmallMarginEnd" height="100%" width="300px">
+                    <items>
+                        <CustomListItem>
+                            <RadioButton text="{label}" select="handleSelectChange">
+                            <customData>
+                                <core:CustomData key="keyy" value="{key}"/>
+                            </customData></RadioButton>
+                        </CustomListItem>
+                    </items>
+                </List>
+                <!-- <RadioButtonGroup items="{/}" select="handleSelectChange">
+                    <RadioButton text="{label}" />
+                </RadioButtonGroup> -->
+            </VBox>
+            <viz:VizFrame vizType="treemap" id="myTreeMap" class="sapUiMediumMarginEnd" width="1010px" height="100%">
                 <viz:feeds id="vizfeed">
                     <viz.feeds:FeedItem uid="color" type="Measure"
                         values="Number Of Instances" />
@@ -72,5 +47,5 @@
           </HBox>  
         </layout:flexContent>
     </layout:FixFlex>
-    </Page>
+</Page>
 </mvc:View>
