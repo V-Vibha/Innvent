@@ -9,30 +9,34 @@
     xmlns:viz.data="sap.viz.ui5.data" height="100%">
 
 <Page id="page" >
-    <layout:FixFlex id='chartFixFlex'>
-       <layout:flexContent>
-       <HBox height="100%" width="100%">
-            <VBox height="100%"> 
+    <layout:FixFlex id='chartFixFlex' class="fixFlexHorizontal" vertical="false">
+       <layout:fixContent >
+            <!-- <Panel expandable="true" expanded="true" width="auto" class="sapUiMediumMarginBegin" sapUiMediumMarginBeginEnd>
+                <content> -->
+                  <VBox height="100%" class="sapUiTinyMarginEnd sidebar"> 
                 <!-- <s:InfoToolbar > -->
-                    <OverflowToolbar id="_IDGenOverflowToolbar1" class="sapUiMediumMarginBegin sapUiSmallMarginEnd" width="300px" height="50px">
-                        <Title level="H3" text="Slice and Dice by" />
+                    <OverflowToolbar id="_IDGenOverflowToolbar1" width="250px" height="50px">
+                        <Title  class="sapUiSmallMarginBegin" level="H3"  text="Slice and Dice by" />
                     </OverflowToolbar>
-                <!-- </s:InfoToolbar> width="1010px"-->
-                <List id ="attributeList" items="{/}" class="sapUiMediumMarginBegin sapUiSmallMarginEnd" height="100%" width="300px">
+                <!-- </s:InfoToolbar> width="1010px" -->
+                <List id ="attributeList" items="{/}" width="250px" height="100%" >
                     <items>
                         <CustomListItem>
-                            <RadioButton text="{label}" select="handleSelectChange">
+                            <RadioButton text="{label}" class="sapUiSmallMarginBegin" select="handleSelectChange">
                             <customData>
                                 <core:CustomData key="keyy" value="{key}"/>
                             </customData></RadioButton>
                         </CustomListItem>
                     </items>
                 </List>
-                <!-- <RadioButtonGroup items="{/}" select="handleSelectChange">
-                    <RadioButton text="{label}" />
-                </RadioButtonGroup> -->
-            </VBox>
-            <viz:VizFrame vizType="treemap" id="myTreeMap" class="sapUiMediumMarginEnd" width="1010px" height="100%">
+                </VBox>
+                <!-- </content>
+            </Panel> -->
+       </layout:fixContent>
+       <layout:flexContent>
+       <!-- <HBox height="100%" width="100%" >  sapUiSmallMarginBegin sapUiLargeMarginEnd-->
+ 
+            <viz:VizFrame vizType="treemap" id="myTreeMap" width="100%" height="100%">
                 <viz:feeds id="vizfeed">
                     <viz.feeds:FeedItem uid="color" type="Measure"
                         values="Number Of Instances" />
@@ -44,7 +48,7 @@
                     values="Selected Attribute" />
                 </viz:feeds>
             </viz:VizFrame>
-          </HBox>  
+          <!-- </HBox>   -->
         </layout:flexContent>
     </layout:FixFlex>
 </Page>
