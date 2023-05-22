@@ -20,66 +20,12 @@ sap.ui.define(
     "use strict";
 
     return Controller.extend("com.sap.bpm.pv.innvent.ui.controller.MyView", {
-      // dataPath:
-      //   "test-resources/sap/viz/demokit/dataset/milk_production_testing_data/revenue_cost_consume_country/1_percent",
-
+    
       settingsModel: {
-        // dataset: {
-        //   name: "Dataset",
-        //   defaultSelected: 1,
-        //   values: [
-        //     {
-        //       name: "Small",
-        //       value: "/small.json",
-        //     },
-        //     {
-        //       name: "Medium",
-        //       value: "/medium.json",
-        //     },
-        //     {
-        //       name: "Large",
-        //       value: "/large.json",
-        //     },
-        //   ],
-        // },
         dataLabel: {
           name: "Value Label",
           defaultState: true,
-        },
-        // semanticColor: {
-        //   name: "Semantic colors",
-        //   defaultState: false,
-        //   values: {
-        //     false: {},
-        //     true: {
-        //       rules: [
-        //         {
-        //           dataContext: { "{Number Of Instances}": { max: 50 } },
-        //           properties: {
-        //             color: "sapUiChartPaletteSemanticGood",
-        //           },
-        //           displayName: "< 50",
-        //         },
-        //         {
-        //           dataContext: {
-        //             SC_Number_Of_Instances: { min: 50, max: 250 },
-        //           },
-        //           properties: {
-        //             color: "sapUiChartPaletteSemanticCritical",
-        //           },
-        //           displayName: "50 - 250",
-        //         },
-        //         {
-        //           dataContext: { SC_Number_Of_Instances: { min: 250 } },
-        //           properties: {
-        //             color: "sapUiChartPaletteSemanticBad",
-        //           },
-        //           displayName: "> 250",
-        //         },
-        //       ],
-        // },
-        // },
-        // },
+        }
       },
       oTreeMap: null,
 
@@ -92,7 +38,7 @@ sap.ui.define(
         var title = this.title = '';
         this.CheckBoxList = this.getView().byId("attributeList");
 
-        var OdataModel = new sap.ui.model.odata.v2.ODataModel(
+        var OdataModel=this.OdataModel = new sap.ui.model.odata.v2.ODataModel(
           "pv-service/runtime/odata/v1/Accounts_Payable",
           {
             json: true,
@@ -113,9 +59,6 @@ sap.ui.define(
           async: false,
           success: function(data) { 
             pyData = data;
-            // data.forEach(function(item) {
-            //    console.log(item);
-            // });
           } , 
           error: function(err) { 
             console.log('error' + err); 
@@ -162,11 +105,12 @@ sap.ui.define(
 	    * @description function to update tree map for the selected attribute name
 	    * @param  attributeName - attribute name selected in Checkbox
 	    */
-      updateTreeMap: function (attributeName) {
+      updateTreeMap: function (attributeName, techname) {
+
         this.treeDataset = new sap.viz.ui5.data.FlattenedDataset({
           dimensions: [
             { axis: 1, name: "Status", value: "Critical" },
-            { axis: 1, name: "Selected Attribute", value: '{'+ attributeName +'}'},
+            { axis: 1, name: techname, value: '{'+ attributeName +'}' },
           ],
           measures: [
             {
@@ -185,7 +129,16 @@ sap.ui.define(
           },
         });
         this.oTreeMap.setDataset(this.treeDataset);
-        
+        // this.oTreeMap.setModel(this.OdataModel);
+        this.oTreeMap.destroyFeeds();
+        var feedSize1 = new sap.viz.ui5.controls.common.feeds.FeedItem({ 'uid': "color", 'type': "Measure", 'values': ["Number Of Instances"] } );
+        var feedSize2 = new sap.viz.ui5.controls.common.feeds.FeedItem( { 'uid': "weight", 'type': "Measure", 'values': ["Number Of Instances"] } );
+        var feedSize3 = new sap.viz.ui5.controls.common.feeds.FeedItem( { 'uid': "title", 'type': "Dimension", 'values': ["Status"] } );
+        var feedSize4 = new sap.viz.ui5.controls.common.feeds.FeedItem( { 'uid': "title", 'type': "Dimension", 'values': [ ""+techname ] } );
+        this.oTreeMap.addFeed(feedSize1);
+        this.oTreeMap.addFeed(feedSize2);
+        this.oTreeMap.addFeed(feedSize3);
+        this.oTreeMap.addFeed(feedSize4);
       },
 
       /**
@@ -195,9 +148,10 @@ sap.ui.define(
       handleSelectChange: function (oEvent) {
         // if(this.title !== oEvent.getSource().getSelectedItem().getText()){
         this.title = oEvent.getSource().getCustomData()[0].getValue();
+        var techname = oEvent.getSource().getText();
         this.oTreeMap.setVizProperties({
           title : { text: "Instances by "+oEvent.getSource().getText() }});
-          this.updateTreeMap(this.title);
+          this.updateTreeMap(this.title, techname);
         // }
       }
     });
