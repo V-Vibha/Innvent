@@ -1,3 +1,47 @@
+# Running a Flask App as an API
+# Prerequisites
+Before you begin, make sure you have the following installed on your system:
+
+Python: You can download and install Python from the official Python website.
+
+Flask: Install Flask using the following command:
+pip install flask
+
+# Getting Started
+0-1681955587526.xlsx is the dataset that we have used to train out ml model in the app.
+
+app.py- The python application.
+
+Dockerfile- Used to deploy the app on cf. (Explained later in the readme file)
+
+requirements.txt- Has all the versions of the dependencies we have used for our application. (Here used just for reference and not required for deployment)
+
+# About the files
+
+## 0-1681955587526.xlsx:
+
+This is an excel sheet that consists of 4296 instances out of which we have 1100 critical instances. The columns represent the different attributes related to the instances(Eg: State, Status, Company Code etc.)
+
+### Assumptions
+For now, we are considering only string data for our use case and dropping the other attributes ('Status','SubStatus','State','Compliance Issues','Scenario Instance Id','Document Number','Cycle Time','Late Payment','Invoiced Manually','Critical Vendor','Invoice Value','Early Payment')
+
+## app.py
+This is the python application that has the machine learning algorithm implementation and also is an api that will output the attributes in the decreasing order of their influence on the critical instances.
+
+### Line 1-8: Importing the libraries
+### Line 10-15: Initialising Flask, Api, reading the dataset into a variable, setting attData.
+### Line 17-38: Implementation of the mutual info logic
+### Line 39-47: Formatting output data
+### Line 53: Specifying the port number
+
+## Dockerfile
+
+### Line 1: Specifying python version
+### Line 2-3: Adding python app and excel sheet
+### Line 4-8: Package install commands
+### Line 9: Exposing port number
+### Line 10: Command to run on the CLI
+
 # Deploy Python Application on SAP Cloud Platform using Docker Container
 This repository provides a guide on deploying a Python application using Docker. Docker allows you to package your application with its dependencies into a container, ensuring consistent behavior across different environments. This README file will walk you through the steps required to deploy your Python app using Docker.
 
@@ -77,3 +121,9 @@ Or login to your SAP Cloud Platform Cockpit and validate the same.
 # Additional Resources
 We followed the following link to deploy our python app:
   https://blogs.sap.com/2021/01/02/deploy-python-application-on-sap-cloud-platform-using-docker-container/#:~:text=Follow%20this%206%20steps%20approach%20to%20run%20a,to%20SAP%20Cloud%20Platform%20helloworld.py%20%28Python%20Source%20Code%29
+  
+# How do we run Hana ML on the database
+https://blogs.sap.com/2022/11/23/hands-on-tutorial-leverage-automl-in-sap-hana-cloud-with-the-predictive-analysis-library/#:~:text=Yes%2C%20the%20Automated%20Predictive%20Library%20%28APL%29%20is%20a,the%20process%20before%20creating%20a%20machine%20learning%20model.
+  
+As of now in our application we have used mutual information algorithm from scikit learn library. But it is not present on hana ml. As an alternate to this algorithm we can use decision trees.
+
