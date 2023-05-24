@@ -4,6 +4,9 @@ This repository provides a guide on deploying a Python application using Docker.
 # Prerequisites
 Docker: You can download and install Docker from the official Docker website.
 
+Create a folder and copy both the files app.py and Dockerfile there. Open the Windows PowerShell and change the current working directory to your newly created directory.
+requirements.txt file contains all the dependencies that were present when we built the app.(Just for reference)
+
 # Getting Started
 To deploy your Python app using Docker, follow these steps:
 
@@ -70,3 +73,7 @@ cf push <App Name> –docker-image <Docker Image Repository:TagName> –docker- 
 Or login to your SAP Cloud Platform Cockpit and validate the same.
 
 4. Open the application URL to validate that the application is up and running.
+
+# Additional Resources
+We followed the following link to deploy our python app:
+  https://blogs.sap.com/2021/01/02/deploy-python-application-on-sap-cloud-platform-using-docker-container/#:~:text=Follow%20this%206%20steps%20approach%20to%20run%20a,to%20SAP%20Cloud%20Platform%20helloworld.py%20%28Python%20Source%20Code%29
